@@ -5,29 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Академія подології Христини Жалейко | Навчання майстрів • Ірпінь</title>
   
-  <meta name="description" content="Практичні курси клінічної подології в Ірпені. Постановка руки, 90% практики на живих моделях, виправлення врослого нігтя титановою ниткою. Міні-групи до 2 осіб.">
+  <meta name="description" content="Індивідуальні курси та підвищення кваліфікації для подологів та майстрів педикюру в Ірпені. Базовий курс, титанова нитка, відпрацювання на моделях, видача сертифіката.">
 
-  
-  <!-- Open Graph / Telegram Preview -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://maliyuigor-blip.github.io/zhaleyko-podology/">
-  <meta property="og:title" content="Академія подології Христини Жалейко | Навчання майстрів • Ірпінь">
-  <meta property="og:description" content="Індивідуальні курси подології з відпрацюванням на моделях. Сертифікат, практика та постановка руки.">
-  <meta property="og:image" content="https://maliyuigor-blip.github.io/zhaleyko-podology/images/real/kristina_portrait.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Академія подології Христини Жалейко | Навчання майстрів • Ірпінь">
-  <meta name="twitter:description" content="Індивідуальні курси подології з відпрацюванням на моделях. Сертифікат, практика та постановка руки.">
-  <meta name="twitter:image" content="https://maliyuigor-blip.github.io/zhaleyko-podology/images/real/kristina_portrait.jpg">
+  <meta property="og:url" content="https://maliyuigor-blip.github.io/zhaleyko-podology/courses.html">
+  <meta property="og:title" content="Академія подології Христини Жалейко | Курси в Ірпені">
+  <meta property="og:description" content="Індивідуальне навчання подології: від базової техніки до титанової нитки. Постановка руки, сертифікат.">
+  <meta property="og:image" content="https://maliyuigor-blip.github.io/zhaleyko-podology/images/real/kristina_hero_courses.jpg">
 
-  <!-- Typography: Luxury Serif + Clean Sans (Exact Dribbble 27725542 Style) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <script>
@@ -35,28 +26,27 @@
       theme: {
         extend: {
           colors: {
-            taupe: '#8E8062',
-            taupeHover: '#7D7054',
-            taupeDark: '#4A4234',
-            taupeDeep: '#383227',
-            sandCard: '#F1EFEA',
-            sandLight: '#FAF9F6',
-            sandBorder: '#E0DBD1',
-            sandBorderDark: '#D6CFBF',
-            textTitle: '#655A44',
-            textBody: '#8A8275',
-            textMuted: '#A69E92',
-            pureWhite: '#FFFFFF',
+            academy: {
+              canvas: '#FAF9F6',
+              card: '#F1EFEA',
+              border: '#E2DCD2',
+              dark: '#2A251E',
+              accent: '#837255',
+              hover: '#6E5F46',
+              gold: '#C5A880'
+            },
+            textDark: '#352F27',
+            textMuted: '#796E5E'
           },
           fontFamily: {
-            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
             mono: ['"Space Grotesk"', 'monospace']
           },
           borderRadius: {
-            'bento': '32px',
-            'card': '24px',
-            'badge': '9999px'
+            'bento': '28px',
+            'card': '20px',
+            'pill': '9999px'
           }
         }
       }
@@ -64,606 +54,327 @@
   </script>
 
   <style>
-    #netlify-badge, .netlify-badge, [data-netlify-badge], iframe[src*="netlify"], .nf-hud {
-      display: none !important;
-      visibility: hidden !important;
-      pointer-events: none !important;
-      opacity: 0 !important;
-      width: 0 !important;
-      height: 0 !important;
-    }
-
     html {
+      scroll-behavior: smooth;
       font-size: 16px;
-      touch-action: manipulation;
       -webkit-tap-highlight-color: transparent;
-      background-color: #FFFFFF;
-      color: #655A44;
     }
-
-    body {
-      background-color: #FFFFFF;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      overflow-x: hidden;
-      padding-bottom: 96px;
-    }
-
-    @media (min-width: 1024px) {
-      body {
-        padding-bottom: 0;
-      }
-    }
-
-    input, select, textarea, button {
-      font-size: 16px !important;
-    }
-
-    /* Mobile Drawer */
-    #mobileDrawer {
-      transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    #mobileDrawer.drawer-closed {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
-    #mobileDrawer.drawer-open {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-    }
-    #drawerContent {
-      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    #mobileDrawer.drawer-closed #drawerContent {
-      transform: translateX(100%);
-    }
-    #mobileDrawer.drawer-open #drawerContent {
-      transform: translateX(0);
-    }
-
-    .burger-line {
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
-    }
-    .burger-active .line-1 {
-      transform: translateY(6px) rotate(45deg);
-    }
-    .burger-active .line-2 {
-      opacity: 0;
-      transform: scaleX(0);
-    }
-    .burger-active .line-3 {
-      transform: translateY(-6px) rotate(-45deg);
+    ::selection {
+      background-color: #837255;
+      color: #FAF9F6;
     }
   </style>
 </head>
+<body class="bg-academy-canvas text-textDark font-sans">
 
-<body class="selection:bg-taupe selection:text-white">
+  <!-- DEMO SWITCHER FLOATING BADGE -->
+  <div class="fixed top-3 left-1/2 -translate-x-1/2 z-50 bg-academy-dark/90 backdrop-blur-md text-white text-xs px-3 py-1.5 rounded-full shadow-lg flex items-center gap-2 border border-white/10 max-w-[95vw] overflow-x-auto">
+    <span class="text-academy-gold font-medium tracking-wide">ДЕМО:</span>
+    <a href="index.html" class="px-2.5 py-0.5 rounded-full text-zinc-300 hover:text-white hover:bg-white/10 transition">1. Quiet Luxury</a>
+    <a href="clinical.html" class="px-2.5 py-0.5 rounded-full text-zinc-300 hover:text-white hover:bg-white/10 transition">2. Swiss Clinical</a>
+    <a href="courses.html" class="px-2.5 py-0.5 rounded-full bg-academy-accent text-white font-semibold transition">3. Академія</a>
+  </div>
 
-  <!-- TOP TWO-TIER STACKED NAVIGATION -->
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-sandBorder transition-all">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Top Row -->
-      <div class="h-20 flex items-center justify-between">
-        <a href="courses.html" class="group flex items-center gap-2">
-          <span class="font-serif text-2xl sm:text-3xl font-bold tracking-[0.2em] text-textTitle uppercase">
-            ZHALEYKO
-          </span>
-          <span class="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-taupe"></span>
-          <span class="hidden sm:inline-block font-sans text-[11px] tracking-wider text-taupe font-semibold uppercase">
-            Podology Academy
-          </span>
-        </a>
-
-        <div class="hidden md:flex flex-col text-center">
-          <span class="text-xs font-medium text-textTitle">Практичне навчання • Міні-групи до 2 осіб</span>
-          <span class="text-[11px] text-textMuted">Ірпінь, вул. Г. Сковороди 11/3 • 90% практики на моделях</span>
-        </div>
-
-        <div class="hidden lg:flex items-center gap-3">
-          <a href="index.html" 
-             class="h-11 px-5 rounded-full border border-sandBorder text-textTitle hover:bg-sandCard transition-all duration-200 text-xs font-medium tracking-wider flex items-center gap-1.5">
-            <i data-lucide="arrow-left" class="w-3.5 h-3.5 text-taupe"></i>
-            <span>Сайт клініки (Послуги)</span>
-          </a>
-
-          <a href="https://t.me/kristina_zhaleyko" target="_blank" rel="noopener noreferrer"
-             class="h-11 px-6 rounded-full bg-taupe hover:bg-taupeHover text-white transition-all duration-200 text-xs font-semibold tracking-widest uppercase flex items-center gap-2 shadow-sm">
-            <i data-lucide="send" class="w-3.5 h-3.5"></i>
-            <span>TELEGRAM</span>
-          </a>
-        </div>
-
-        <!-- Mobile Controls -->
-        <div class="flex items-center gap-2 lg:hidden">
-          <a href="https://t.me/kristina_zhaleyko" target="_blank" aria-label="Telegram"
-             class="w-11 h-11 rounded-full border border-sandBorder text-textTitle flex items-center justify-center active:bg-sandCard transition">
-            <i data-lucide="send" class="w-4 h-4 text-taupe"></i>
-          </a>
-
-          <button id="burgerBtn" type="button" aria-label="Відкрити меню" aria-expanded="false"
-                  class="w-11 h-11 rounded-full bg-sandCard border border-sandBorder text-textTitle flex flex-col items-center justify-center gap-1.5 active:scale-95 transition">
-            <span class="burger-line line-1 w-5 h-0.5 bg-textTitle rounded-full"></span>
-            <span class="burger-line line-2 w-5 h-0.5 bg-textTitle rounded-full"></span>
-            <span class="burger-line line-3 w-5 h-0.5 bg-textTitle rounded-full"></span>
-          </button>
-        </div>
+  <!-- TOP BAR -->
+  <div class="pt-12 pb-2.5 bg-academy-card border-b border-academy-border text-xs text-textMuted">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <span class="font-medium text-textDark flex items-center gap-1.5">
+          <i data-lucide="award" class="w-4 h-4 text-academy-accent"></i>
+          Академія практичної подології
+        </span>
+        <span class="hidden sm:inline text-academy-border">•</span>
+        <span class="hidden sm:inline">м. Ірпінь, вул. Григорія Сковороди, 11/3</span>
       </div>
-
-      <!-- Bottom Nav Row -->
-      <div class="hidden lg:flex items-center justify-between border-t border-sandBorder py-3.5 text-xs font-medium text-textBody">
-        <div class="flex items-center gap-8 mx-auto">
-          <a href="#programs" class="hover:text-textTitle transition py-1">Програми курсів</a>
-          <a href="#audience" class="hover:text-textTitle transition py-1">Кому підійде</a>
-          <a href="#instructor" class="hover:text-textTitle transition py-1">Про наставника</a>
-          <a href="#practice" class="hover:text-textTitle transition py-1">Практика на моделях</a>
-          <a href="#certificate" class="hover:text-textTitle transition py-1">Сертифікат</a>
-          <a href="index.html" class="text-taupe font-bold hover:text-taupeDark transition py-1 flex items-center gap-1">
-            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-            <span>Послуги клініки (Пацієнтам)</span>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </header>
-
-  <!-- MOBILE DRAWER -->
-  <div id="mobileDrawer" class="drawer-closed fixed inset-0 z-50 flex justify-end bg-taupeDark/40 backdrop-blur-sm lg:hidden" aria-hidden="true">
-    <div id="drawerBackdrop" class="absolute inset-0"></div>
-    <div id="drawerContent" class="relative w-full max-w-sm h-full bg-white border-l border-sandBorder shadow-2xl flex flex-col justify-between overflow-y-auto p-6 sm:p-8">
-      <div>
-        <div class="flex items-center justify-between pb-6 border-b border-sandBorder">
-          <div>
-            <span class="font-serif font-bold text-xl tracking-widest text-textTitle uppercase block">ZHALEYKO</span>
-            <span class="font-sans text-[10px] text-taupe tracking-wider uppercase block font-semibold">Podology Academy</span>
-          </div>
-          <button id="closeDrawerBtn" type="button" class="w-10 h-10 rounded-full bg-sandCard border border-sandBorder flex items-center justify-center text-textTitle">
-            <i data-lucide="x" class="w-4 h-4"></i>
-          </button>
-        </div>
-
-        <nav class="py-6 flex flex-col space-y-1">
-          <a href="#programs" class="flex items-center justify-between p-3.5 rounded-2xl hover:bg-sandCard transition font-medium text-textTitle">
-            <span>Програми курсів</span>
-            <i data-lucide="chevron-right" class="w-4 h-4 text-textMuted"></i>
-          </a>
-          <a href="#audience" class="flex items-center justify-between p-3.5 rounded-2xl hover:bg-sandCard transition font-medium text-textTitle">
-            <span>Для кого навчання</span>
-            <i data-lucide="chevron-right" class="w-4 h-4 text-textMuted"></i>
-          </a>
-          <a href="#instructor" class="flex items-center justify-between p-3.5 rounded-2xl hover:bg-sandCard transition font-medium text-textTitle">
-            <span>Про інструктора</span>
-            <i data-lucide="chevron-right" class="w-4 h-4 text-textMuted"></i>
-          </a>
-          <a href="index.html" class="flex items-center justify-between p-3.5 rounded-2xl bg-sandCard transition font-bold text-taupe mt-2">
-            <span>До сайту клініки (Послуги)</span>
-            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-          </a>
-        </nav>
-      </div>
-
-      <div class="pt-6 border-t border-sandBorder space-y-3">
-        <a href="https://t.me/kristina_zhaleyko" target="_blank"
-           class="w-full h-12 bg-taupe text-white rounded-full font-sans text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2 shadow">
-          <i data-lucide="send" class="w-4 h-4"></i>
-          <span>ОТРИМАТИ ПРОГРАМУ В TELEGRAM</span>
-        </a>
-        <div class="grid grid-cols-2 gap-2 text-center pt-1">
-          <a href="tel:0689183738" class="h-11 rounded-full border border-sandBorder flex items-center justify-center gap-1.5 text-xs text-textTitle font-medium">
-            <i data-lucide="phone" class="w-3.5 h-3.5 text-taupe"></i> Дзвінок
-          </a>
-          <a href="https://www.instagram.com/kristina.zhaleyko" target="_blank" class="h-11 rounded-full border border-sandBorder flex items-center justify-center gap-1.5 text-xs text-textTitle font-medium">
-            <i data-lucide="instagram" class="w-3.5 h-3.5 text-taupe"></i> Instagram
-          </a>
-        </div>
-      </div>
+      <a href="index.html" class="text-academy-accent hover:underline font-medium">← Повернутися до Клініки</a>
     </div>
   </div>
 
-  <main>
-    <!-- HERO SECTION (EXACT ASYMMETRICAL 2-COLUMN BENTO + FULL-WIDTH BOTTOM PILL CTA) -->
-    <section class="pt-8 sm:pt-12 pb-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 bg-academy-canvas/95 backdrop-blur-md border-b border-academy-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="courses.html" class="flex flex-col">
+        <span class="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-academy-dark leading-none">ZHLEYKO ACADEMY</span>
+        <span class="font-mono text-[9px] uppercase tracking-[0.25em] text-textMuted mt-1">Школа подології та ортоніксії</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
+        <a href="#courses" class="hover:text-academy-accent transition">Програми курсів</a>
+        <a href="#mentor" class="hover:text-academy-accent transition">Про інструктора</a>
+        <a href="#benefits" class="hover:text-academy-accent transition">Переваги</a>
+        <a href="index.html" class="hover:text-academy-accent transition">Клініка</a>
+      </nav>
+
+      <a href="https://apnt.app/centr_estetik_life" target="_blank"
+         class="px-5 py-2.5 rounded-pill bg-academy-accent text-white text-sm font-semibold hover:bg-academy-hover transition shadow-sm">
+        Забронювати курс
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="pt-8 pb-16 md:pt-14 md:pb-24 border-b border-academy-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
-        <div class="grid lg:grid-cols-12 gap-6 items-stretch">
-          
-          <!-- Left Column: Portrait photo with rounded-[32px] -->
-          <div class="lg:col-span-5 relative rounded-[32px] overflow-hidden aspect-4/5 lg:aspect-auto min-h-[420px] bg-sandCard border border-sandBorder">
-            <img src="images/real/kristina_hero_courses.jpg" 
-                 alt="Христина Жалейко — автор курсів подології" 
-                 class="w-full h-full object-cover">
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-academy-card border border-academy-border text-xs font-semibold text-academy-accent mb-6">
+            <span class="w-2 h-2 rounded-full bg-academy-gold"></span>
+            ІНДИВІДУАЛЬНИЙ ФОРМАТ ТА МІНІ-ГРУПИ ДО 2 ОСІБ
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal text-academy-dark tracking-tight leading-[1.08] mb-6">
+            Опануйте прибуткову професію <span class="italic text-academy-accent">клінічного подолога</span> з гарантією постановки руки
+          </h1>
+
+          <p class="text-base sm:text-lg text-textMuted leading-relaxed max-w-xl mb-8">
+            90% практики на реальних моделях зі складними випадками: врослі нігті, оніхомікоз, гіперкератоз, корекційні системи. Офіційний диплом та підтримка випускників.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10">
+            <a href="https://apnt.app/centr_estetik_life" target="_blank"
+               class="px-8 py-4 rounded-pill bg-academy-accent text-white font-bold text-base hover:bg-academy-hover transition shadow-md text-center">
+              Подати заявку на навчання
+            </a>
+            <a href="tel:0689183738"
+               class="px-6 py-4 rounded-pill bg-academy-card border border-academy-border text-textDark font-medium text-base hover:bg-academy-border/30 transition text-center flex items-center justify-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-academy-accent"></i>
+              068 918 37 38
+            </a>
+          </div>
+
+          <div class="grid grid-cols-3 gap-6 pt-6 border-t border-academy-border">
+            <div>
+              <div class="font-serif text-3xl font-bold text-academy-dark">1 на 1</div>
+              <div class="text-xs text-textMuted mt-1">Постановка руки</div>
+            </div>
+            <div>
+              <div class="font-serif text-3xl font-bold text-academy-dark">100%</div>
+              <div class="text-xs text-textMuted mt-1">Моделі центру</div>
+            </div>
+            <div>
+              <div class="font-serif text-3xl font-bold text-academy-dark">Сертифікат</div>
+              <div class="text-xs text-textMuted mt-1">Державний зразок</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="rounded-bento overflow-hidden border border-academy-border shadow-card aspect-[4/5] bg-academy-card relative">
+            <img src="images/real/kristina_hero_courses.jpg" alt="Христина Жалейко на заняттях з ученицями" class="w-full h-full object-cover">
             
-            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-sandBorder flex items-center justify-between">
+            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-card bg-academy-canvas/95 backdrop-blur-md border border-academy-border shadow-sm flex items-center justify-between">
               <div>
-                <span class="block font-medium text-xs text-textTitle">Христина Жалейко</span>
-                <span class="block text-[11px] text-textMuted">Практикуючий інструктор • 100+ випускників</span>
+                <div class="font-serif text-lg font-bold text-academy-dark">Христина Жалейко</div>
+                <div class="text-xs text-textMuted">Автор навчальних програм, ТОП-подолог</div>
               </div>
-              <span class="w-8 h-8 rounded-full bg-sandCard border border-sandBorder flex items-center justify-center text-taupe">
-                <i data-lucide="award" class="w-4 h-4"></i>
+              <i data-lucide="check-circle-2" class="w-6 h-6 text-academy-accent"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COURSES CATALOG -->
+  <section id="courses" class="py-16 md:py-24 border-b border-academy-border bg-academy-card/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-2xl mb-12">
+        <span class="text-xs font-mono uppercase tracking-widest text-academy-accent font-semibold block mb-2">Навчальні напрямки</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-academy-dark tracking-tight mb-4">
+          Програми підготовки майстрів
+        </h2>
+        <p class="text-textMuted text-base">
+          Усі розхідні матеріали, апарати, фрези, моделі та засоби захисту надаються центром у повному обсязі.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- COURSE 1 -->
+        <div class="rounded-bento bg-academy-canvas p-8 border border-academy-border shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="px-3 py-1 rounded-full bg-academy-card border border-academy-border text-xs font-mono text-academy-accent font-semibold">
+                КУРС #1 • ФУНДАМЕНТ
               </span>
+              <span class="font-serif text-2xl font-bold text-academy-dark">3 дні</span>
             </div>
-          </div>
-
-          <!-- Right Column: Warm Light Sand Card (#F1EFEA) -->
-          <div class="lg:col-span-7 rounded-[32px] bg-sandCard p-8 sm:p-12 lg:p-14 flex flex-col justify-between border border-sandBorder min-h-[460px] relative overflow-hidden">
             
-            <div class="space-y-4 max-w-xl">
-              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-sandBorder text-textTitle text-xs font-medium">
-                <span class="w-2 h-2 rounded-full bg-taupe"></span>
-                <span>Академія клінічної подології • Ірпінь</span>
-              </div>
-              
-              <h1 class="text-2xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-textTitle leading-[1.2]">
-                Професійне навчання клінічній подології
-              </h1>
-              
-              <p class="text-sm sm:text-base text-textBody leading-relaxed font-normal pt-1">
-                Перейдіть від звичайного естетичного педикюру до високооплачуваної медичної подології. Повна постановка руки на живих моделях, виправлення врослого нігтя титановою ниткою та автоклавування класу B.
-              </p>
-            </div>
-
-            <!-- Floating Inset Micro-Card -->
-            <div class="my-6 self-end sm:self-auto flex justify-end">
-              <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden border-2 border-white shadow-subtle bg-white">
-                <img src="images/real/procedure_drill_heel.jpg" alt="Постановка руки" class="w-full h-full object-cover">
-              </div>
-            </div>
-
-            <!-- Bottom: Monumental Title -->
-            <div class="pt-4 border-t border-sandBorder/80 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-              <div>
-                <span class="font-sans text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-taupe uppercase block">
-                  PODOLOGY ACADEMY
-                </span>
-                <span class="text-xs text-textMuted tracking-wider uppercase block mt-1">
-                  Small groups • 90% practice • Irpin
-                </span>
-              </div>
-
-              <a href="index.html" class="inline-flex items-center gap-2 text-xs font-semibold text-taupe hover:text-taupeDark transition self-start sm:self-auto pb-1">
-                <span>Сайт клініки</span>
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-              </a>
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- Full-Width Bottom Pill CTA -->
-        <a href="https://t.me/kristina_zhaleyko" target="_blank" rel="noopener noreferrer"
-           class="w-full py-5 rounded-full bg-taupe hover:bg-taupeHover text-white text-xs sm:text-sm uppercase tracking-widest font-semibold flex items-center justify-center gap-3 transition-all duration-200 shadow-sm hover:shadow">
-          <span>ДІЗНАТИСЯ РОЗКЛАД ТА ВАРТІСТЬ У TELEGRAM</span>
-          <i data-lucide="send" class="w-4 h-4"></i>
-        </a>
-
-      </div>
-    </section>
-
-    <!-- SECTION 2: WHAT AWAITS YOU AT THE ACADEMY? (SOLID TAUPE #8E8062 CARDS) -->
-    <section id="features" class="py-16 sm:py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="flex items-center justify-between mb-10">
-          <div>
-            <h2 class="text-2xl sm:text-3xl font-medium text-textTitle">
-              Чому саме наше навчання?
-            </h2>
-            <p class="text-sm text-textBody mt-1">Максимум практики та персональна увага наставника</p>
-          </div>
-          <span class="text-taupe">
-            <i data-lucide="arrow-down-left" class="w-6 h-6"></i>
-          </span>
-        </div>
-
-        <div class="grid lg:grid-cols-3 gap-6">
-          
-          <div class="bg-taupe text-white rounded-[28px] p-6 lg:p-7 flex flex-col justify-between space-y-6">
-            <div class="rounded-2xl overflow-hidden aspect-16/10 w-full bg-taupeDark/40">
-              <img src="images/real/procedure_drill_heel.jpg" alt="Постановка руки" class="w-full h-full object-cover">
-            </div>
-            <div class="space-y-2">
-              <span class="font-sans text-xs tracking-widest uppercase font-semibold text-sandBorder">ФОРМАТ НАВЧАННЯ</span>
-              <h3 class="text-lg font-bold uppercase tracking-wide">МІНІ-ГРУПИ ДО 2 ОСІБ</h3>
-              <p class="text-xs text-sandLight/90 leading-relaxed font-normal">
-                Жодних лекцій на 20 людей. Христина особисто коригує кожен рух вашого інструменту та нахил фрези.
-              </p>
-            </div>
-          </div>
-
-          <div class="bg-taupe text-white rounded-[28px] p-6 lg:p-7 flex flex-col justify-between space-y-6">
-            <div class="rounded-2xl overflow-hidden aspect-16/10 w-full bg-taupeDark/40">
-              <img src="images/real/consultation.jpg" alt="Живі пацієнти" class="w-full h-full object-cover">
-            </div>
-            <div class="space-y-2">
-              <span class="font-sans text-xs tracking-widest uppercase font-semibold text-sandBorder">90% ПРАКТИКИ</span>
-              <h3 class="text-lg font-bold uppercase tracking-wide">РЕАЛЬНІ МОДЕЛІ З ПАТОЛОГІЯМИ</h3>
-              <p class="text-xs text-sandLight/90 leading-relaxed font-normal">
-                Відпрацювання на 4–6 живих пацієнтах зі справжніми мозолями, тріщинами та врослими нігтями.
-              </p>
-            </div>
-          </div>
-
-          <div class="bg-taupe text-white rounded-[28px] p-6 lg:p-7 flex flex-col justify-between space-y-6">
-            <div class="rounded-2xl overflow-hidden aspect-16/10 w-full bg-taupeDark/40">
-              <img src="images/real/case_nail_macro.jpg" alt="Титанова нитка" class="w-full h-full object-cover">
-            </div>
-            <div class="space-y-2">
-              <span class="font-sans text-xs tracking-widest uppercase font-semibold text-sandBorder">ВИСОКИЙ ЧЕК</span>
-              <h3 class="text-lg font-bold uppercase tracking-wide">КОРЕКЦІЙНІ СИСТЕМИ</h3>
-              <p class="text-xs text-sandLight/90 leading-relaxed font-normal">
-                Опанування титанової нитки, що дозволяє брати від 1400 ₴ за процедуру одразу після випуску.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECTION 3: COURSE PROGRAMS (LIGHT SAND CARDS #F1EFEA) -->
-    <section id="programs" class="py-16 sm:py-20 bg-sandLight border-y border-sandBorder">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="flex items-center justify-between mb-10">
-          <div>
-            <span class="text-xs font-semibold uppercase tracking-wider text-taupe block">Модулі навчання</span>
-            <h2 class="text-2xl sm:text-3xl font-medium text-textTitle mt-1">Програми курсів</h2>
-          </div>
-          <span class="text-taupe">
-            <i data-lucide="arrow-down-left" class="w-6 h-6"></i>
-          </span>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8">
-          
-          <!-- Program 1 -->
-          <div class="bg-sandCard rounded-[32px] p-8 border border-sandBorder flex flex-col justify-between">
-            <div class="space-y-5">
-              <div class="flex items-center justify-between">
-                <span class="bg-taupe text-white text-[11px] font-bold uppercase px-3.5 py-1 rounded-full">
-                  Базовий курс
-                </span>
-                <span class="text-xs text-textMuted font-medium">2 дні практики</span>
-              </div>
-
-              <h3 class="font-sans text-2xl font-bold uppercase text-textTitle">
-                Клінічна подологія: старт у професії
-              </h3>
-
-              <ul class="space-y-3 text-xs text-textBody">
-                <li class="flex items-start gap-2.5">
-                  <i data-lucide="check" class="w-4 h-4 text-taupe shrink-0 mt-0.5"></i>
-                  <span>Анатомія стопи, деформації шкіри та оніхопатології.</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <i data-lucide="check" class="w-4 h-4 text-taupe shrink-0 mt-0.5"></i>
-                  <span>Стерилізація за стандартами EN 13060, автоклавування B.</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <i data-lucide="check" class="w-4 h-4 text-taupe shrink-0 mt-0.5"></i>
-                  <span>Апаратна обробка глибоких тріщин та висвердлювання мозолів.</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <i data-lucide="check" class="w-4 h-4 text-taupe shrink-0 mt-0.5"></i>
-                  <span>Практика на 4–6 моделях під повним наглядом Христини.</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="pt-8 mt-6 border-t border-sandBorder flex items-center justify-between">
-              <span class="text-xs font-semibold text-textTitle">Індивідуально</span>
-              <a href="https://t.me/kristina_zhaleyko" target="_blank"
-                 class="h-11 px-6 rounded-full bg-taupe hover:bg-taupeHover text-white text-xs font-semibold uppercase tracking-wider flex items-center gap-2">
-                <span>ЗАБРОНЮВАТИ</span>
-                <i data-lucide="send" class="w-3.5 h-3.5"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Program 2 -->
-          <div class="bg-sandCard rounded-[32px] p-8 border border-sandBorder flex flex-col justify-between">
-            <div class="space-y-5">
-              <div class="flex items-center justify-between">
-                <span class="bg-taupeDark text-white text-[11px] font-bold uppercase px-3.5 py-1 rounded-full">
-                  Спецкурс
-                </span>
-                <span class="text-xs text-textMuted font-medium">1 день інтенсиву</span>
-              </div>
-
-              <h3 class="font-sans text-2xl font-bold uppercase text-textTitle">
-                Корекційні системи: Титанова нитка
-              </h3>
-
-              <ul class="space-y-3 text-xs text-textBody">
-                <li class="flex items-start gap-2.5">
-                  <i data-lucide="check" class="w-4 h-4 text-taupe shrink-0 mt-0.5"></i>
-                  <span>Біомеханіка розгинання нігтя нікель-титановим сплавом.</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <i data-lucide="check" class="w-4 h-4 text-taupe shrink-0 mt-0.5"></i>
-                  <span>Підбір товщини дроту (012, 014, 016) під патологію.</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <i data-lucide="check" class="w-4 h-4 text-taupe shrink-0 mt-0.5"></i>
-                  <span>Адгезивні композитні протоколи без сколів та відшарувань.</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <i data-lucide="check" class="w-4 h-4 text-taupe shrink-0 mt-0.5"></i>
-                  <span>Сертифікат та постійна підтримка у закритому чаті випускників.</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="pt-8 mt-6 border-t border-sandBorder flex items-center justify-between">
-              <span class="text-xs font-semibold text-textTitle">Окупність: 4–5 пацієнтів</span>
-              <a href="https://t.me/kristina_zhaleyko" target="_blank"
-                 class="h-11 px-6 rounded-full bg-taupe hover:bg-taupeHover text-white text-xs font-semibold uppercase tracking-wider flex items-center gap-2">
-                <span>ЗАБРОНЮВАТИ</span>
-                <i data-lucide="send" class="w-3.5 h-3.5"></i>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECTION 4: INSTRUCTOR SECTION -->
-    <section id="instructor" class="py-16 sm:py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="grid lg:grid-cols-12 gap-10 items-center">
-          
-          <div class="lg:col-span-5 max-w-md mx-auto w-full">
-            <div class="rounded-[28px] overflow-hidden border border-sandBorder bg-white shadow-sm">
-              <div class="relative aspect-4/5 overflow-hidden">
-                <img src="images/real/kristina_portrait.jpg" alt="Христина Жалейко" class="w-full h-full object-cover">
-                <div class="absolute top-4 left-4 bg-taupeDark/90 backdrop-blur-md text-white text-xs px-4 py-1.5 rounded-full font-medium">
-                  8+ років практики
-                </div>
-              </div>
-              <div class="bg-taupe text-white p-5 flex items-center justify-between">
-                <div>
-                  <h3 class="font-serif text-xl font-bold tracking-wide">Христина Жалейко</h3>
-                  <span class="text-xs text-sandLight/90">Практикуючий інструктор</span>
-                </div>
-                <span class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center">
-                  <i data-lucide="send" class="w-4 h-4"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="lg:col-span-7 space-y-6">
-            <span class="text-xs font-semibold uppercase tracking-widest text-taupe block">Ваш наставник</span>
+            <h3 class="font-serif text-2xl font-bold text-academy-dark mb-3">
+              «Базовий курс клінічної подології»
+            </h3>
             
-            <h2 class="text-2xl sm:text-4xl font-medium text-textTitle leading-snug">
-              «Я не даю суху теорію. Я беру ваші руки та вчу відчувати тканини і глибину роботи інструмента»
-            </h2>
-
-            <p class="text-sm sm:text-base text-textBody leading-relaxed">
-              Мої випускники відкривають власні кабінети в Україні та Європі або відразу переходять на чек клінічної подології. Навчання відбувається в діючому центрі в Ірпені на реальному обладнанні.
+            <p class="text-sm text-textMuted leading-relaxed mb-6">
+              Повний вхід у професію з нуля або підвищення для майстрів естетичного педикюру. Анатомія стопи, дезінфекція та стерилізація, робота скальпелем та апаратом, тріщини, мозолі, гіпергідроз.
             </p>
 
-            <div class="pt-2">
-              <a href="https://t.me/kristina_zhaleyko" target="_blank"
-                 class="h-12 px-8 rounded-full bg-taupe hover:bg-taupeHover text-white transition text-xs font-semibold uppercase tracking-widest inline-flex items-center gap-2">
-                <span>ПОСПІЛКУВАТИСЯ З ХРИСТИНОЮ У TELEGRAM</span>
-                <i data-lucide="send" class="w-3.5 h-3.5"></i>
-              </a>
+            <div class="space-y-2 mb-8">
+              <div class="flex items-center gap-2 text-xs font-medium text-textDark">
+                <i data-lucide="check" class="w-4 h-4 text-academy-accent"></i>
+                Теорія + 6 практичних моделей
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-textDark">
+                <i data-lucide="check" class="w-4 h-4 text-academy-accent"></i>
+                Робота з діабетичною стопою
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-textDark">
+                <i data-lucide="check" class="w-4 h-4 text-academy-accent"></i>
+                Методичний посібник та сертифікат
+              </div>
             </div>
           </div>
 
+          <div class="pt-6 border-t border-academy-border flex items-center justify-between">
+            <div>
+              <span class="text-xs text-textMuted block">Формат:</span>
+              <span class="font-bold text-sm text-academy-dark">Індивідуально</span>
+            </div>
+            <a href="https://apnt.app/centr_estetik_life" target="_blank"
+               class="px-6 py-3 rounded-pill bg-academy-accent text-white font-semibold text-xs hover:bg-academy-hover transition">
+              Дізнатися дати та вартість →
+            </a>
+          </div>
+        </div>
+
+        <!-- COURSE 2 -->
+        <div class="rounded-bento bg-academy-canvas p-8 border border-academy-border shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="px-3 py-1 rounded-full bg-academy-card border border-academy-border text-xs font-mono text-academy-accent font-semibold">
+                КУРС #2 • ТОП-ПРИБУТОК
+              </span>
+              <span class="font-serif text-2xl font-bold text-academy-dark">1 день</span>
+            </div>
+            
+            <h3 class="font-serif text-2xl font-bold text-academy-dark mb-3">
+              «Ортоніксія: Титанова нитка від А до Я»
+            </h3>
+            
+            <p class="text-sm text-textMuted leading-relaxed mb-6">
+              Найбільш затребувана та високооплачувана процедура в подології. Безопераційна корекція врослого та деформованого нігтя. Правильний розрахунок натягу, підбір діаметра дроту, установка композиту.
+            </p>
+
+            <div class="space-y-2 mb-8">
+              <div class="flex items-center gap-2 text-xs font-medium text-textDark">
+                <i data-lucide="check" class="w-4 h-4 text-academy-accent"></i>
+                Відпрацювання на складних моделях
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-textDark">
+                <i data-lucide="check" class="w-4 h-4 text-academy-accent"></i>
+                Протоколи тампонади та зняття запалення
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-textDark">
+                <i data-lucide="check" class="w-4 h-4 text-academy-accent"></i>
+                Стартовий набір матеріалів у подарунок
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-academy-border flex items-center justify-between">
+            <div>
+              <span class="text-xs text-textMuted block">Формат:</span>
+              <span class="font-bold text-sm text-academy-dark">Індивідуально / до 2 осіб</span>
+            </div>
+            <a href="https://apnt.app/centr_estetik_life" target="_blank"
+               class="px-6 py-3 rounded-pill bg-academy-accent text-white font-semibold text-xs hover:bg-academy-hover transition">
+              Дізнатися дати та вартість →
+            </a>
+          </div>
         </div>
 
       </div>
-    </section>
 
-    <!-- SECTION 5: FULL-WIDTH TOP FOOTER CTA -->
-    <div class="bg-sandLight py-10 border-t border-sandBorder">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <a href="https://t.me/kristina_zhaleyko" target="_blank" rel="noopener noreferrer"
-           class="w-full py-5 rounded-full bg-taupe hover:bg-taupeHover text-white text-xs sm:text-sm uppercase tracking-widest font-semibold flex items-center justify-center gap-3 transition-all duration-200 shadow-sm hover:shadow">
-          <span>ОТРИМАТИ ПРОГРАМУ ТА ЗАПИСАТИСЯ НА КУРС</span>
-          <i data-lucide="send" class="w-4 h-4"></i>
+    </div>
+  </section>
+
+  <!-- MENTOR -->
+  <section id="mentor" class="py-16 md:py-24 border-b border-academy-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <div class="lg:col-span-5">
+          <div class="rounded-bento overflow-hidden border border-academy-border shadow-card aspect-[4/5]">
+            <img src="images/real/kristina_portrait.jpg" alt="Христина Жалейко" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <span class="text-xs font-mono uppercase tracking-widest text-academy-accent font-semibold block mb-2">Ваш наставник</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-normal text-academy-dark tracking-tight mb-6">
+            Христина Жалейко: 10+ років щоденної клінічної практики
+          </h2>
+          <p class="text-textMuted text-base leading-relaxed mb-6">
+            "Я навчу вас бачити стопу очима лікаря. Моя мета на курсі — щоб ви не просто повторювали рухи за мною, а чітко розуміли біомеханіку, причини деформацій та вміли безпечно допомогти навіть у найбільш запущених випадках без страху зробити пацієнту боляче."
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-academy-border">
+            <div class="flex items-center gap-3 text-sm font-semibold text-textDark">
+              <i data-lucide="check-circle" class="w-5 h-5 text-academy-accent"></i>
+              Постійна підтримка випускників у чаті
+            </div>
+            <div class="flex items-center gap-3 text-sm font-semibold text-textDark">
+              <i data-lucide="check-circle" class="w-5 h-5 text-academy-accent"></i>
+              Допомога у виборі обладнання та фрез
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-24 bg-academy-dark text-white text-center">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-serif text-3xl sm:text-5xl font-normal text-white mb-6">
+        Почніть заробляти на якісній подології
+      </h2>
+      <p class="text-academy-border text-base sm:text-lg mb-8">
+        Залиште заявку на безкоштовну консультацію з інструктором щодо підбору програми навчання.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://apnt.app/centr_estetik_life" target="_blank"
+           class="w-full sm:w-auto px-8 py-4 rounded-pill bg-academy-accent text-white font-bold text-base hover:bg-academy-hover transition shadow-md">
+          Записатися на курс через онлайн-сервіс
+        </a>
+        <a href="tel:0689183738"
+           class="w-full sm:w-auto px-8 py-4 rounded-pill bg-white/10 border border-white/20 text-white font-medium text-base hover:bg-white/20 transition flex items-center justify-center gap-2">
+          <i data-lucide="phone" class="w-4 h-4"></i>
+          068 918 37 38
         </a>
       </div>
     </div>
-  </main>
+  </section>
 
-  <!-- MINIMALIST FOOTER -->
-  <footer class="bg-white border-t border-sandBorder py-12 text-textBody text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-8 border-b border-sandBorder">
-        <div>
-          <span class="font-serif text-2xl font-bold tracking-widest text-textTitle uppercase block">ZHALEYKO</span>
-          <span class="text-[10px] text-textMuted tracking-wider uppercase block">Podology Academy • Irpin</span>
-        </div>
-        <div class="flex items-center gap-3">
-          <a href="https://t.me/kristina_zhaleyko" target="_blank" class="w-9 h-9 rounded-full bg-taupe text-white flex items-center justify-center hover:bg-taupeHover transition">
-            <i data-lucide="send" class="w-4 h-4"></i>
-          </a>
-          <a href="https://www.instagram.com/kristina.zhaleyko" target="_blank" class="w-9 h-9 rounded-full bg-taupe text-white flex items-center justify-center hover:bg-taupeHover transition">
-            <i data-lucide="instagram" class="w-4 h-4"></i>
-          </a>
-          <a href="tel:0689183738" class="w-9 h-9 rounded-full bg-taupe text-white flex items-center justify-center hover:bg-taupeHover transition">
-            <i data-lucide="phone" class="w-4 h-4"></i>
-          </a>
-        </div>
-        <div class="text-left md:text-right space-y-0.5">
-          <a href="tel:0689183738" class="text-sm font-semibold text-textTitle hover:text-taupe transition block">068 918 37 38</a>
-          <span class="block text-textMuted">м. Ірпінь, вул. Григорія Сковороди, 11/3</span>
-        </div>
+  <!-- FOOTER -->
+  <footer class="py-12 bg-academy-card border-t border-academy-border text-xs text-textMuted">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div>
+        <span class="font-serif font-bold text-lg text-academy-dark">ZHLEYKO ACADEMY</span>
+        <p class="mt-0.5">м. Ірпінь, вул. Григорія Сковороди, 11/3 • 068 918 37 38</p>
       </div>
-      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-textMuted gap-4">
-        <span>© 2026 ZHALEYKO Podology Academy.</span>
-        <a href="index.html" class="text-taupe hover:underline">Перейти до послуг клініки для пацієнтів</a>
+      <div class="flex gap-6 font-semibold text-textDark">
+        <a href="index.html" class="hover:text-academy-accent transition">1. Демо Quiet Luxury</a>
+        <a href="clinical.html" class="hover:text-academy-accent transition">2. Демо Swiss Clinical</a>
+        <a href="courses.html" class="text-academy-accent transition">3. Демо Академія</a>
+      </div>
+      <div>
+        © 2026 ZHLEYKO ACADEMY. Всі права захищено.
       </div>
     </div>
   </footer>
 
-  <!-- MOBILE FIXED STICKY THUMB-BAR -->
-  <div class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-lg border-t border-sandBorder p-3 sm:p-4 lg:hidden shadow-float">
-    <div class="max-w-md mx-auto grid grid-cols-2 gap-2.5 items-center">
-      <a href="tel:0689183738" 
-         class="h-12 px-3 rounded-full border border-sandBorder text-textTitle text-xs uppercase font-semibold tracking-wider flex items-center justify-center gap-2 active:bg-sandCard transition">
-        <i data-lucide="phone" class="w-3.5 h-3.5 text-taupe"></i>
-        <span>Дзвінок</span>
-      </a>
-      <a href="https://t.me/kristina_zhaleyko" target="_blank" rel="noopener noreferrer"
-         class="h-12 px-3 rounded-full bg-taupe text-white text-xs uppercase font-semibold tracking-wider flex items-center justify-center gap-1.5 shadow active:scale-98 transition">
-        <i data-lucide="send" class="w-3.5 h-3.5"></i>
-        <span>Курси (TG)</span>
-      </a>
-    </div>
-  </div>
-
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       if (window.lucide) window.lucide.createIcons();
-
-      const burgerBtn = document.getElementById('burgerBtn');
-      const closeDrawerBtn = document.getElementById('closeDrawerBtn');
-      const mobileDrawer = document.getElementById('mobileDrawer');
-      const drawerBackdrop = document.getElementById('drawerBackdrop');
-      const drawerLinks = mobileDrawer.querySelectorAll('nav a, a');
-
-      function openDrawer() {
-        mobileDrawer.classList.remove('drawer-closed');
-        mobileDrawer.classList.add('drawer-open');
-        burgerBtn.classList.add('burger-active');
-        burgerBtn.setAttribute('aria-expanded', 'true');
-        document.body.style.overflow = 'hidden';
-      }
-
-      function closeDrawer() {
-        mobileDrawer.classList.remove('drawer-open');
-        mobileDrawer.classList.add('drawer-closed');
-        burgerBtn.classList.remove('burger-active');
-        burgerBtn.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      }
-
-      burgerBtn?.addEventListener('click', () => {
-        if (mobileDrawer.classList.contains('drawer-open')) closeDrawer();
-        else openDrawer();
-      });
-
-      closeDrawerBtn?.addEventListener('click', closeDrawer);
-      drawerBackdrop?.addEventListener('click', closeDrawer);
-
-      drawerLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          if (link.getAttribute('href')?.startsWith('#')) closeDrawer();
-        });
-      });
     });
   </script>
-
 </body>
 </html>
