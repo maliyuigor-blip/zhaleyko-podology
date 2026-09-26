@@ -147,7 +147,7 @@
     }
   </style>
 </head>
-<body class="bg-[#FFFFFF] text-[#111827] font-sans selection:bg-[#C5A374] selection:text-white pb-20 sm:pb-0">
+<body class="bg-[#FFFFFF] text-[#111827] font-sans selection:bg-[#C5A374] selection:text-white pb-20 sm:pb-0 overflow-x-hidden relative">
 
   <!-- UPPER ANNOUNCEMENT BAR (Mobile Optimized with Generous Breathing Room) -->
   <div class="py-2.5 bg-[#FBFBFA] border-b border-[#EBE8E1] text-xs text-[#4B5563]">
@@ -216,7 +216,7 @@
 
   <!-- MOBILE DRAWER -->
   <div id="mobileDrawer" class="fixed inset-0 z-50 pointer-events-none opacity-0 transition-opacity duration-300">
-    <div id="drawerOverlay" class="absolute inset-0 bg-[#C5A374]-deep/40 backdrop-blur-sm"></div>
+    <div id="drawerOverlay" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
     <div class="absolute right-0 top-0 bottom-0 w-[85vw] max-w-sm bg-white p-6 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 pointer-events-auto">
       <div>
         <div class="flex items-center justify-between pb-6 border-b border-[#EBE8E1]">
@@ -299,17 +299,17 @@
           </div>
 
           <!-- TRUST METRICS STRIP -->
-          <div class="grid grid-cols-3 gap-6 pt-6 border-t border-[#EBE8E1] w-full max-w-lg">
+          <div class="grid grid-cols-3 gap-2 sm:gap-6 pt-6 border-t border-[#EBE8E1] w-full max-w-lg">
             <div>
-              <div class="font-serif text-3xl font-bold text-[#111827]">99.4%</div>
+              <div class="font-serif text-2xl sm:text-3xl font-bold text-[#111827]">99.4%</div>
               <div class="text-xs text-[#4B5563] mt-0.5">Випадків без рецидиву</div>
             </div>
             <div>
-              <div class="font-serif text-3xl font-bold text-[#111827]">4 етапи</div>
+              <div class="font-serif text-2xl sm:text-3xl font-bold text-[#111827]">4 етапи</div>
               <div class="text-xs text-[#4B5563] mt-0.5">Стерилізації інструментів</div>
             </div>
             <div>
-              <div class="font-serif text-3xl font-bold text-[#111827]">10+ років</div>
+              <div class="font-serif text-2xl sm:text-3xl font-bold text-[#111827]">10+ років</div>
               <div class="text-xs text-[#4B5563] mt-0.5">Досвіду наставника</div>
             </div>
           </div>
@@ -910,46 +910,7 @@
       overlay?.addEventListener('click', closeDrawer);
       drawerLinks.forEach(link => link.addEventListener('click', closeDrawer));
 
-      // Interactive Before / After Slider
-      const slider = document.getElementById('caseSlider');
-      const clip = document.getElementById('clipLayer');
-      const handle = document.getElementById('sliderHandle');
-      let isSliding = false;
-
-      function setPosition(xPos) {
-        if (!slider || !clip || !handle) return;
-        const rect = slider.getBoundingClientRect();
-        let relativeX = xPos - rect.left;
-        if (relativeX < 0) relativeX = 0;
-        if (relativeX > rect.width) relativeX = rect.width;
-        const pct = (relativeX / rect.width) * 100;
-        clip.style.width = pct + '%';
-        handle.style.left = pct + '%';
-      }
-
-      slider?.addEventListener('mousedown', (e) => {
-        isSliding = true;
-        setPosition(e.clientX);
-      });
-
-      window.addEventListener('mousemove', (e) => {
-        if (!isSliding) return;
-        setPosition(e.clientX);
-      });
-
-      window.addEventListener('mouseup', () => { isSliding = false; });
-
-      slider?.addEventListener('touchstart', (e) => {
-        isSliding = true;
-        if (e.touches[0]) setPosition(e.touches[0].clientX);
-      }, { passive: true });
-
-      window.addEventListener('touchmove', (e) => {
-        if (!isSliding) return;
-        if (e.touches[0]) setPosition(e.touches[0].clientX);
-      }, { passive: true });
-
-      window.addEventListener('touchend', () => { isSliding = false; });
+      // Touch optimization complete
     });
   </script>
 </body>

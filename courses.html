@@ -68,7 +68,7 @@
     }
   </style>
 </head>
-<body class="bg-[#FFFFFF] text-[#111827] font-sans selection:bg-[#C5A374] selection:text-white">
+<body class="bg-[#FFFFFF] text-[#111827] font-sans selection:bg-[#C5A374] selection:text-white overflow-x-hidden relative pb-20 sm:pb-0">
 
   <!-- TOP BAR -->
   <div class="py-2.5 bg-[#FBFBFA] border-b border-[#EBE8E1] text-xs text-textMuted">
@@ -100,12 +100,56 @@
         <a href="index.html" class="hover:text-[#B89355] transition">Клініка</a>
       </nav>
 
-      <a href="https://apnt.app/centr_estetik_life" target="_blank"
-         class="px-5 py-2.5 rounded-pill bg-[#C5A374] text-white text-sm font-semibold hover:bg-[#B89355] transition shadow-sm">
-        Забронювати курс
-      </a>
+      <div class="flex items-center gap-3">
+        <a href="https://apnt.app/centr_estetik_life" target="_blank"
+           class="hidden sm:inline-flex px-5 py-2.5 rounded-pill bg-[#C5A374] text-white text-sm font-semibold hover:bg-[#B89355] transition shadow-sm">
+          Забронювати курс
+        </a>
+        <button id="mobileMenuBtn" aria-label="Меню" class="md:hidden p-2.5 rounded-xl border border-[#EBE8E1] text-[#111827] hover:bg-[#FBFBFA] transition">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
     </div>
   </header>
+  <!-- MOBILE DRAWER -->
+  <div id="mobileDrawer" class="fixed inset-0 z-50 pointer-events-none opacity-0 transition-opacity duration-300">
+    <div id="drawerOverlay" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-[85vw] max-w-sm bg-white p-6 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 pointer-events-auto">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-[#EBE8E1]">
+          <div class="flex flex-col">
+            <span class="font-serif text-2xl font-bold text-[#111827]">KZ ACADEMY</span>
+            <span class="text-[10px] text-[#4B5563] uppercase tracking-wider">Школа подології</span>
+          </div>
+          <button id="closeDrawerBtn" class="p-2 rounded-lg hover:bg-[#FBFBFA] text-[#111827]">
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+        
+        <nav class="flex flex-col gap-4 mt-6 text-base font-medium text-[#111827]">
+          <a href="#courses" class="drawer-link py-2 border-b border-[#EBE8E1]/50">Програми курсів</a>
+          <a href="#mentor" class="drawer-link py-2 border-b border-[#EBE8E1]/50">Про інструктора</a>
+          <a href="#benefits" class="drawer-link py-2 border-b border-[#EBE8E1]/50">Переваги навчання</a>
+          <a href="index.html" class="drawer-link py-2 text-[#B89355] font-semibold flex items-center justify-between">
+            <span>Центр клінічної подології</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-[#EBE8E1] space-y-3">
+        <a href="https://apnt.app/centr_estetik_life" target="_blank" class="w-full py-3 rounded-pill bg-[#C5A374] text-white text-center font-semibold text-sm flex items-center justify-center gap-2 shadow">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          Забронювати курс
+        </a>
+        <a href="tel:+380960447041" class="w-full py-3 rounded-pill bg-[#FBFBFA] border border-[#EBE8E1] text-[#111827] text-center font-medium text-sm flex items-center justify-center gap-2">
+          <i data-lucide="phone" class="w-4 h-4 text-[#B89355]"></i>
+          +38 (096) 044 70 41
+        </a>
+      </div>
+    </div>
+  </div>
+
 
   <!-- HERO -->
   <section class="pt-8 pb-16 md:pt-14 md:pb-24 border-b border-[#EBE8E1]">
@@ -139,17 +183,17 @@
             </a>
           </div>
 
-          <div class="grid grid-cols-3 gap-6 pt-6 border-t border-[#EBE8E1]">
+          <div class="grid grid-cols-3 gap-2 sm:gap-6 pt-6 border-t border-[#EBE8E1]">
             <div>
-              <div class="font-serif text-3xl font-bold text-[#111827]">1 на 1</div>
+              <div class="font-serif text-2xl sm:text-3xl font-bold text-[#111827]">1 на 1</div>
               <div class="text-xs text-textMuted mt-1">Постановка руки</div>
             </div>
             <div>
-              <div class="font-serif text-3xl font-bold text-[#111827]">100%</div>
+              <div class="font-serif text-2xl sm:text-3xl font-bold text-[#111827]">100%</div>
               <div class="text-xs text-textMuted mt-1">Моделі центру</div>
             </div>
             <div>
-              <div class="font-serif text-3xl font-bold text-[#111827]">Сертифікат</div>
+              <div class="font-serif text-xl sm:text-3xl font-bold text-[#111827]">Сертифікат</div>
               <div class="text-xs text-textMuted mt-1">Державний зразок</div>
             </div>
           </div>
@@ -601,10 +645,53 @@
       </div>
     </div>
   </footer>
+  <!-- MOBILE STICKY THUMB-BAR (For Courses) -->
+  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md p-3 border-t border-[#EBE8E1] flex items-center gap-3">
+    <a href="tel:+380960447041" class="p-3 rounded-pill bg-[#FBFBFA] border border-[#EBE8E1] text-[#B89355] flex items-center justify-center shrink-0">
+      <i data-lucide="phone" class="w-5 h-5"></i>
+    </a>
+    <a href="https://apnt.app/centr_estetik_life" target="_blank" class="flex-1 py-3 px-4 rounded-pill bg-[#C5A374] text-white text-center font-bold text-sm flex items-center justify-center gap-2 shadow">
+      <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+      Забронювати курс
+    </a>
+  </div>
+
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       if (window.lucide) window.lucide.createIcons();
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) window.lucide.createIcons();
+
+      // Mobile Drawer Toggle
+      const menuBtn = document.getElementById('mobileMenuBtn');
+      const closeBtn = document.getElementById('closeDrawerBtn');
+      const drawer = document.getElementById('mobileDrawer');
+      const overlay = document.getElementById('drawerOverlay');
+      const drawerLinks = document.querySelectorAll('.drawer-link');
+
+      function openDrawer() {
+        drawer.classList.remove('pointer-events-none', 'opacity-0');
+        drawer.classList.add('pointer-events-auto', 'opacity-100');
+        drawer.firstElementChild.nextElementSibling.classList.remove('translate-x-full');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDrawer() {
+        drawer.classList.add('pointer-events-none', 'opacity-0');
+        drawer.classList.remove('pointer-events-auto', 'opacity-100');
+        drawer.firstElementChild.nextElementSibling.classList.add('translate-x-full');
+        document.body.style.overflow = '';
+      }
+
+      menuBtn?.addEventListener('click', openDrawer);
+      closeBtn?.addEventListener('click', closeDrawer);
+      overlay?.addEventListener('click', closeDrawer);
+      drawerLinks.forEach(link => link.addEventListener('click', closeDrawer));
     });
   </script>
 </body>
