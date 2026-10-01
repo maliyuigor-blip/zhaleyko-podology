@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk" class="scroll-smooth antialiased" class="overflow-x-hidden">
+<html lang="uk" class="scroll-smooth antialiased overflow-x-hidden">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -7,7 +7,7 @@
   
   <meta name="description" content="Центр клінічної подології Христини Жалейко в Ірпені. Збереження здоров'я та естетики стоп. Лікування врослого нігтя без болю, титанова нитка, медичний педикюр. Онлайн-запис 24/7.">
 
-  <!-- Open Graph / Telegram / Social Preview -->
+  <!-- Open Graph / Social Media Preview -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://maliyuigor-blip.github.io/zhaleyko-podology/">
   <meta property="og:title" content="KZ PODOCENTER • Центр клінічної подології Христини Жалейко">
@@ -18,7 +18,7 @@
   <meta name="twitter:description" content="Безболісна подологія в Ірпені. Запис онлайн.">
   <meta name="twitter:image" content="https://maliyuigor-blip.github.io/zhaleyko-podology/images/uploaded/IMG_6471.jpg">
 
-  <!-- Typography -->
+  <!-- Fonts: Cormorant Garamond (Editorial Serif), Plus Jakarta Sans (Humanist Sans), Space Grotesk (Tech Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -34,48 +34,29 @@
       theme: {
         extend: {
           colors: {
-            brand: {
-              white: '#FFFFFF',
-              canvas: '#FFFFFF',
-              card: '#FBFBFA',
-              cardHover: '#F4F3EF',
-              border: '#EBE8E1',
-              borderDark: '#D6D1C4',
-              gold: '#C5A374',
-              goldHover: '#B89355',
-              goldLight: '#F7F2EA',
-              emerald: '#16382C',
-              emeraldDark: '#0D241C',
-              emeraldLight: '#E8F1EC',
-              graphite: '#111827',
-              graphiteMuted: '#4B5563',
-              graphiteLight: '#9CA3AF'
-            },
-            taupe: {
-              DEFAULT: '#C5A374',
-              hover: '#B89355',
-              dark: '#16382C',
-              deep: '#111827',
-              light: '#D4B890',
-              tint: '#FBF8F2'
-            },
+            paper: '#FAF8F5',
             sand: {
-              canvas: '#FFFFFF',
-              card: '#FBFBFA',
-              border: '#EBE8E1',
-              borderDark: '#D6D1C4',
-              dark: '#16382C'
+              50: '#FBF9F5',
+              100: '#F4EFE6',
+              200: '#E9E2D5',
+              300: '#D8CEBE',
+              400: '#BFB29E',
+              500: '#8F8367', // Dribbble khaki accent
+              600: '#736850',
+              700: '#59503D',
+              800: '#3D3629',
+              900: '#26221A'
             },
-            body: {
-              text: '#111827',
-              muted: '#4B5563',
-              soft: '#9CA3AF'
+            forest: {
+              DEFAULT: '#16382C', // Kristina clinic green
+              dark: '#0E241C',
+              soft: '#1F4D3D',
+              light: '#EAF2EE',
+              glow: '#2B6953'
             },
-            clinical: {
-              accent: '#16382C',
-              accentHover: '#0D241C',
-              accentLight: '#E8F1EC'
-            }
+            dark: '#141715',
+            muted: '#5C635E',
+            borderLight: '#E8E3DA'
           },
           fontFamily: {
             serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
@@ -83,14 +64,8 @@
             mono: ['"Space Grotesk"', 'monospace']
           },
           borderRadius: {
-            'bento': '28px',
-            'card': '20px',
+            'card': '24px',
             'pill': '9999px'
-          },
-          boxShadow: {
-            'subtle': '0 4px 20px -2px rgba(61, 54, 39, 0.05)',
-            'card': '0 12px 32px -4px rgba(61, 54, 39, 0.08)',
-            'elevated': '0 20px 40px -8px rgba(61, 54, 39, 0.12)'
           }
         }
       }
@@ -98,18 +73,15 @@
   </script>
 
   <style>
-    /* Global Anti-Slop Discipline */
     html {
       scroll-behavior: smooth;
       font-size: 16px;
       -webkit-tap-highlight-color: transparent;
-      touch-action: manipulation;
     }
     ::selection {
-      background-color: #7A6E53;
-      color: #FAF9F6;
+      background-color: #16382C;
+      color: #FAF8F5;
     }
-    /* Before / After Slider clipping */
     .clip-layer {
       position: absolute;
       top: 0;
@@ -125,385 +97,289 @@
       bottom: 0;
       left: 50%;
       width: 3px;
-      background-color: #FAF9F6;
+      background-color: #FAF8F5;
       cursor: ew-resize;
       z-index: 20;
-      box-shadow: 0 0 12px rgba(0,0,0,0.3);
+      box-shadow: 0 0 14px rgba(0,0,0,0.35);
       transform: translateX(-50%);
-    }
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #FAF9F6;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #D4CCBF;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #7A6E53;
     }
   </style>
 </head>
-<body class="bg-[#FFFFFF] text-[#111827] font-sans selection:bg-[#C5A374] selection:text-white pb-20 sm:pb-0 overflow-x-hidden relative overflow-x-hidden">
+<body class="bg-[#FAF8F5] text-dark font-sans selection:bg-forest selection:text-paper pb-20 sm:pb-0 overflow-x-hidden relative">
 
-  <!-- UPPER ANNOUNCEMENT BAR (Mobile Optimized with Generous Breathing Room) -->
-  <div class="py-2.5 bg-[#FBFBFA] border-b border-[#EBE8E1] text-xs text-[#4B5563]">
-    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-      <div class="flex items-center gap-3">
-        <span class="flex items-center gap-1.5 font-medium text-[#111827]">
-          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#B89355] shrink-0"></i>
+  <!-- 1. TOP UTILITY BAR (Dribbble 2-Tier Header) -->
+  <div class="border-b border-borderLight bg-[#FAF8F5] text-xs text-muted">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-3 flex flex-col md:flex-row items-center justify-between gap-2.5">
+      <!-- Address & Working hours -->
+      <div class="flex items-center gap-4 text-xs">
+        <span class="flex items-center gap-1.5 font-medium text-dark">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-sand-500 shrink-0"></i>
           <span>м. Ірпінь, вул. Григорія Сковороди, 11/3</span>
         </span>
-        <span class="hidden md:inline text-[#D6D1C4]">•</span>
-        <span class="hidden md:flex items-center gap-1.5 text-xs text-[#4B5563]">
-          <i data-lucide="clock" class="w-3.5 h-3.5 text-[#B89355] shrink-0"></i>
-          <span>Пн-Сб: 09:00 - 20:00 (за записом)</span>
-        </span>
+        <span class="hidden sm:inline text-borderLight">|</span>
+        <span class="hidden sm:inline text-muted">Пн–Сб: 09:00 – 20:00 (за записом)</span>
       </div>
-      <div class="flex items-center justify-between w-full sm:w-auto gap-4 pt-1 sm:pt-0 border-t sm:border-t-0 border-[#EBE8E1]/60">
-        <a href="tel:+380960447041" class="font-semibold text-[#111827] hover:text-[#B89355] transition flex items-center gap-1.5">
-          <i data-lucide="phone" class="w-3.5 h-3.5 text-[#B89355] shrink-0"></i>
+
+      <!-- Quick Action Phone & Booking -->
+      <div class="flex items-center gap-3">
+        <a href="tel:+380960447041" class="font-medium text-dark hover:text-forest transition flex items-center gap-1.5">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-sand-500 shrink-0"></i>
           <span>+38 (096) 044 70 41</span>
         </a>
-        <a href="courses.html" class="inline-block text-[#B89355] hover:text-[#16382C] font-semibold transition text-xs">
+        <a href="courses.html" class="hidden sm:inline-block text-sand-600 hover:text-forest font-semibold transition border-l border-borderLight pl-3">
           Академія подології →
         </a>
       </div>
     </div>
   </div>
 
-  <!-- MAIN HEADER -->
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#EBE8E1] transition-all">
-    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+  <!-- 2. MAIN HEADER (Sticky Minimal Navigation) -->
+  <header class="sticky top-0 z-40 bg-[#FAF8F5]/90 backdrop-blur-md border-b border-borderLight transition-all">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
       
-      <!-- LOGO -->
-      <a href="index.html" class="flex flex-col group">
-        <span class="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-[#111827] leading-none group-hover:text-[#B89355] transition">KZ PODOCENTER</span>
-        <span class="font-mono text-[9px] uppercase tracking-[0.25em] text-[#4B5563] mt-0.5">Клінічна подологія Христини Жалейко</span>
+      <!-- Brand Logo Wordmark -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full bg-forest text-paper flex items-center justify-center font-serif text-xl font-bold tracking-tight shadow-sm group-hover:scale-105 transition-transform">
+          KZ
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-lg tracking-[0.18em] uppercase font-bold text-forest leading-none">
+            Zhaleyko
+          </span>
+          <span class="font-mono text-[9px] uppercase tracking-[0.25em] text-sand-600 font-medium mt-1">
+            Podology Studio
+          </span>
+        </div>
       </a>
 
-      <!-- DESKTOP NAV -->
-      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-[#111827]">
-        <a href="#about" class="hover:text-[#B89355] transition">Про центр</a>
-        <a href="#services" class="hover:text-[#B89355] transition">Послуги та ціни</a>
-        <a href="#cases" class="hover:text-[#B89355] transition">Результати лікування</a>
-        <a href="#tandem" class="hover:text-[#B89355] transition">Медичний тандем</a>
-        <a href="#reviews" class="hover:text-[#B89355] transition">Відгуки</a>
-        <a href="courses.html" class="text-[#B89355] font-semibold hover:text-[#B89355]-hover transition flex items-center gap-1">
-          Академія
-          <span class="text-[10px] bg-[#C5A374]-tint text-[#B89355] px-1.5 py-0.5 rounded-full border border-taupe/20">Курси</span>
-        </a>
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8 text-xs font-medium tracking-wider uppercase text-muted">
+        <a href="#about" class="hover:text-forest transition">Про центр</a>
+        <a href="#cases" class="hover:text-forest transition">Клінічні випадки</a>
+        <a href="#services" class="hover:text-forest transition">Послуги</a>
+        <a href="#tandem" class="hover:text-forest transition">Тандем з лікарями</a>
+        <a href="#reviews" class="hover:text-forest transition">Відгуки</a>
+        <a href="#contacts" class="hover:text-forest transition">Контакти</a>
       </nav>
 
-      <!-- HEADER ACTION -->
-      <div class="flex items-center gap-3">
-        <a href="https://apnt.app/centr_estetik_life" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center justify-center px-5 py-2.5 rounded-pill bg-[#C5A374] text-sand-canvas text-sm font-semibold hover:bg-[#C5A374]-hover transition shadow-sm active:scale-95">
-          <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
-          Записатися онлайн
+      <!-- Desktop CTA & Mobile Toggle -->
+      <div class="flex items-center gap-4">
+        <a href="https://apnt.app/centr_estetik_life" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-forest text-paper hover:bg-forest-dark text-xs uppercase tracking-[0.15em] font-semibold px-6 py-3 rounded-pill transition shadow-sm hover:shadow">
+          <span>Онлайн-запис</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
         </a>
 
-        <!-- MOBILE BURGER -->
-        <button id="mobileMenuBtn" aria-label="Меню" class="lg:hidden p-2.5 rounded-xl border border-[#EBE8E1] text-[#111827] hover:bg-[#FBFBFA] transition">
+        <!-- Mobile Menu Trigger -->
+        <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 rounded-full border border-borderLight flex items-center justify-center text-dark hover:border-sand-500 transition">
           <i data-lucide="menu" class="w-5 h-5"></i>
         </button>
       </div>
+
     </div>
   </header>
 
-  <!-- MOBILE DRAWER -->
+  <!-- MOBILE SLIDE-OVER DRAWER -->
   <div id="mobileDrawer" class="fixed inset-0 z-50 pointer-events-none opacity-0 transition-opacity duration-300">
-    <div id="drawerOverlay" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
-    <div class="absolute right-0 top-0 bottom-0 w-[85vw] max-w-sm bg-white p-6 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out pointer-events-auto">
+    <div id="drawerOverlay" class="absolute inset-0 bg-dark/40 backdrop-blur-sm transition-opacity"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-5/6 max-w-sm bg-[#FAF8F5] border-l border-borderLight p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out shadow-2xl">
       <div>
-        <div class="flex items-center justify-between pb-6 border-b border-[#EBE8E1]">
-          <div class="flex flex-col">
-            <span class="font-serif text-2xl font-bold text-[#111827]">KZ PODOCENTER</span>
-            <span class="text-[10px] text-[#4B5563] uppercase tracking-wider">Подологічний центр</span>
-          </div>
-          <button id="closeDrawerBtn" class="p-2 rounded-lg hover:bg-[#FBFBFA] text-[#111827]">
-            <i data-lucide="x" class="w-6 h-6"></i>
+        <div class="flex items-center justify-between pb-6 border-b border-borderLight">
+          <span class="font-serif text-lg font-bold text-forest tracking-wider">ZHALEYKO STUDIO</span>
+          <button id="closeDrawerBtn" class="w-9 h-9 rounded-full border border-borderLight flex items-center justify-center text-muted hover:text-dark">
+            <i data-lucide="x" class="w-4 h-4"></i>
           </button>
         </div>
-        
-        <nav class="flex flex-col gap-4 mt-6 text-base font-medium text-[#111827]">
-          <a href="#about" class="drawer-link py-2 border-b border-[#EBE8E1]/50">Про центр та фахівця</a>
-          <a href="#services" class="drawer-link py-2 border-b border-[#EBE8E1]/50">Послуги та вартість</a>
-          <a href="#cases" class="drawer-link py-2 border-b border-[#EBE8E1]/50">До / Після лікування</a>
-          <a href="#tandem" class="drawer-link py-2 border-b border-[#EBE8E1]/50">Тандем з хірургами</a>
-          <a href="#reviews" class="drawer-link py-2 border-b border-[#EBE8E1]/50">Відгуки пацієнтів</a>
-          <a href="courses.html" class="drawer-link py-2 text-[#B89355] font-semibold flex items-center justify-between">
-            <span>Академія для майстрів</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </a>
+        <nav class="flex flex-col gap-4 mt-8 text-sm font-medium tracking-wide uppercase text-dark">
+          <a href="#about" class="drawer-link py-2 border-b border-borderLight/50">Про центр</a>
+          <a href="#cases" class="drawer-link py-2 border-b border-borderLight/50">Клінічні випадки</a>
+          <a href="#services" class="drawer-link py-2 border-b border-borderLight/50">Послуги та ціни</a>
+          <a href="#tandem" class="drawer-link py-2 border-b border-borderLight/50">Лікарський тандем</a>
+          <a href="#reviews" class="drawer-link py-2 border-b border-borderLight/50">Відгуки</a>
+          <a href="#contacts" class="drawer-link py-2 border-b border-borderLight/50">Контакти</a>
+          <a href="courses.html" class="drawer-link py-2 text-sand-600 font-bold">Академія (Курси) →</a>
         </nav>
       </div>
-
-      <div class="pt-6 border-t border-[#EBE8E1] space-y-3">
-        <a href="https://apnt.app/centr_estetik_life" target="_blank" class="w-full py-3 rounded-pill bg-[#C5A374] text-white text-center font-semibold text-sm flex items-center justify-center gap-2 shadow">
-          <i data-lucide="calendar" class="w-4 h-4"></i>
-          Записатися на прийом
+      <div class="pt-6 border-t border-borderLight flex flex-col gap-3">
+        <a href="https://apnt.app/centr_estetik_life" target="_blank" class="w-full text-center bg-forest text-paper py-3.5 rounded-pill text-xs font-semibold uppercase tracking-wider">
+          Записатися онлайн 24/7
         </a>
-        <a href="tel:+380960447041" class="w-full py-3 rounded-pill bg-[#FBFBFA] border border-[#EBE8E1] text-[#111827] text-center font-medium text-sm flex items-center justify-center gap-2">
-          <i data-lucide="phone" class="w-4 h-4 text-[#B89355]"></i>
+        <a href="tel:+380960447041" class="text-center text-xs font-mono text-muted">
           +38 (096) 044 70 41
         </a>
       </div>
     </div>
   </div>
 
-  <!-- HERO SECTION (High Taste-Skill Architecture) -->
-  <section class="pt-8 pb-16 md:pt-14 md:pb-24 overflow-hidden border-b border-[#EBE8E1]">
-    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-      
-      <!-- TOP EYEBROW + PILL BADGE -->
-      <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FBFBFA] border border-[#EBE8E1] text-xs font-medium text-[#111827]">
-          <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
-          <span>Клінічна практика • Прийом ведеться в Ірпені</span>
-        </div>
-        <div class="text-xs font-mono text-[#4B5563] uppercase tracking-wider hidden sm:block">
-          Тандем: подолог + дерматолог + хірург
-        </div>
-      </div>
-
-      <!-- MAIN ASYMMETRIC GRID -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+  <!-- 3. HERO SECTION (Dribbble Persona Asymmetric Grid) -->
+  <section class="pt-6 pb-12 sm:pt-10 sm:pb-16">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
         
-        <!-- LEFT 7 COLS: HEADLINE & VALUE PROP -->
-        <div class="lg:col-span-7 flex flex-col items-start">
-          <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-normal tracking-tight text-[#111827] leading-[1.15] mb-5">
-            Відновлюємо здоров'я та легкість ваших стоп <span class="italic font-light text-[#B89355]">без болю та хірургії</span>
-          </h1>
-
-          <p class="text-base sm:text-lg text-[#4B5563] leading-relaxed max-w-xl mb-8">
-            Професійна подологічна допомога при врослих нігтях, оніхомікозі, мозолях та тріщинах. Корекція титановою ниткою, медичний апаратний педикюр та повна стерильність за медичним стандартом.
-          </p>
-
-          <!-- HERO CTA ROW -->
-          <div class="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10">
-            <a href="https://apnt.app/centr_estetik_life" target="_blank" rel="noopener noreferrer"
-               class="px-8 py-4 rounded-pill bg-[#C5A374] text-sand-canvas text-base font-semibold hover:bg-[#C5A374]-hover transition shadow-card text-center flex items-center justify-center gap-2 active:scale-95">
-              <span>Обрати зручний час</span>
-              <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-            </a>
-            
-            <a href="tel:+380960447041"
-               class="px-6 py-4 rounded-pill bg-[#FBFBFA] border border-[#EBE8E1] text-[#111827] text-base font-medium hover:bg-sand-border/40 transition text-center flex items-center justify-center gap-2">
-              <i data-lucide="phone-call" class="w-4 h-4 text-[#B89355]"></i>
-              <span>+38 (096) 044 70 41</span>
-            </a>
+        <!-- Left Column: Tall Visual Card (Real Portrait of Kristina in clinic) -->
+        <div class="lg:col-span-5 relative rounded-card overflow-hidden bg-sand-100 min-h-[460px] lg:min-h-[580px] shadow-sm">
+          <img src="images/uploaded/IMG_6471.jpg" alt="Христина Жалейко — засновниця центру подології" class="w-full h-full object-cover object-center">
+          
+          <!-- Subtle Gradient for text readability -->
+          <div class="absolute inset-0 bg-gradient-to-t from-dark/70 via-transparent to-transparent"></div>
+          
+          <!-- Floating Editorial Pill Badges -->
+          <div class="absolute top-5 left-5 right-5 flex justify-between items-center">
+            <span class="bg-[#FAF8F5]/90 backdrop-blur-md border border-borderLight text-forest px-3.5 py-1.5 rounded-full text-[11px] font-mono tracking-wider uppercase font-semibold">
+              м. Ірпінь
+            </span>
+            <span class="bg-forest/90 backdrop-blur-md text-paper px-3.5 py-1.5 rounded-full text-[11px] font-mono tracking-wider uppercase font-medium">
+              10+ років практики
+            </span>
           </div>
 
-          <!-- TRUST METRICS STRIP -->
-          <div class="grid grid-cols-3 gap-2 sm:gap-6 pt-6 border-t border-[#EBE8E1] w-full max-w-lg">
-            <div>
-              <div class="font-serif text-2xl sm:text-3xl font-bold text-[#111827]">99.4%</div>
-              <div class="text-xs text-[#4B5563] mt-0.5">Випадків без рецидиву</div>
+          <!-- Bottom Card Caption -->
+          <div class="absolute bottom-6 left-6 right-6 text-paper">
+            <div class="font-serif text-2xl font-semibold leading-tight mb-1">
+              Христина Жалейко
             </div>
-            <div>
-              <div class="font-serif text-2xl sm:text-3xl font-bold text-[#111827]">4 етапи</div>
-              <div class="text-xs text-[#4B5563] mt-0.5">Стерилізації інструментів</div>
-            </div>
-            <div>
-              <div class="font-serif text-2xl sm:text-3xl font-bold text-[#111827]">10+ років</div>
-              <div class="text-xs text-[#4B5563] mt-0.5">Досвіду наставника</div>
-            </div>
+            <p class="text-xs text-paper/80 font-light">
+              Провідний подолог-практик, автор сертифікованих курсів, член асоціації фахівців догляду стоп
+            </p>
           </div>
         </div>
 
-        <!-- RIGHT 5 COLS: EDITORIAL HERO CARD WITH AUTHENTIC PHOTO -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative rounded-bento overflow-hidden bg-[#FBFBFA] border border-[#EBE8E1] shadow-card aspect-[4/5]">
-            <img src="images/uploaded/IMG_6471.jpg" alt="Христина Жалейко — практикуючий подолог" class="w-full h-full object-cover object-top filter contrast-[1.02]">
-            
-            <!-- Inset Floating Authority Tag -->
-            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-card bg-white/90 backdrop-blur-md border border-[#EBE8E1] shadow-subtle flex items-center justify-between">
+        <!-- Right Column: Editorial Canvas (Warm Sand Bento Card) -->
+        <div class="lg:col-span-7 bg-[#F4EFE6] border border-borderLight rounded-card p-8 sm:p-12 flex flex-col justify-between shadow-sm">
+          <div>
+            <!-- Monospace Micro-Label -->
+            <div class="flex items-center gap-2 mb-6">
+              <span class="w-2 h-2 rounded-full bg-forest animate-pulse"></span>
+              <span class="font-mono text-xs uppercase tracking-[0.2em] text-sand-700 font-semibold">
+                Центр клінічної подології • Ірпінь
+              </span>
+            </div>
+
+            <!-- Monumental Editorial Headline -->
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal text-forest leading-[1.05] tracking-tight mb-6">
+              Здоров’я та естетика ваших стоп без болю й хірургічного втручання
+            </h1>
+
+            <!-- Descriptive Body -->
+            <p class="text-muted text-sm sm:text-base leading-relaxed max-w-xl mb-8 font-light">
+              Експертне усунення врослих нігтів, мозолів, тріщин та деформацій. Ми не маскуємо проблеми — ми лікуємо їх у нерозривному тандемі з хірургами та дерматологами за швейцарськими протоколами стерильності.
+            </p>
+
+            <!-- Nested Thumbnail / Proof Card (Dribbble Pattern) -->
+            <div class="bg-[#FAF8F5] border border-borderLight rounded-2xl p-4 flex items-center gap-4 mb-8 max-w-lg">
+              <img src="images/uploaded/IMG_4490.jpg" alt="Стерильний кабінет подології" class="w-16 h-16 rounded-xl object-cover shrink-0">
               <div>
-                <div class="font-serif text-lg font-bold text-[#111827]">Христина Жалейко</div>
-                <div class="text-xs text-[#4B5563]">Керівник центру, провідний подолог</div>
+                <span class="text-[11px] font-mono uppercase tracking-wider text-sand-600 font-semibold block">
+                  Госпітальна стерильність
+                </span>
+                <span class="text-xs text-dark font-medium leading-snug block mt-0.5">
+                  4-етапна стерилізація DIN EN ISO 13485 з відкриттям крафт-пакета при вас
+                </span>
               </div>
-              <div class="w-10 h-10 rounded-full bg-[#C5A374] text-sand-canvas flex items-center justify-center shrink-0">
-                <i data-lucide="shield-check" class="w-5 h-5"></i>
+            </div>
+          </div>
+
+          <!-- Bottom Full-Width Pill CTA (Dribbble Hero Action) -->
+          <div class="pt-4">
+            <a href="https://apnt.app/centr_estetik_life" target="_blank" class="w-full group bg-forest text-paper hover:bg-forest-dark py-4 px-8 rounded-pill flex items-center justify-between transition-all shadow-md hover:shadow-lg">
+              <span class="text-xs sm:text-sm uppercase tracking-[0.18em] font-semibold">
+                Записатися на первинну консультацію
+              </span>
+              <div class="w-8 h-8 rounded-full bg-paper/10 flex items-center justify-center group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform">
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-paper"></i>
               </div>
-            </div>
+            </a>
           </div>
+
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- KEY DIFFERENTIATORS (Bento Architecture) -->
-  <section id="about" class="py-16 md:py-24 bg-[#FBFBFA] border-b border-[#EBE8E1]">
-    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-      
-      <div class="max-w-2xl mb-12">
-        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-[#111827] tracking-tight mb-4">
-          Медична відповідальність та повага до вашого комфорту
-        </h2>
-        <p class="text-[#4B5563] text-base">
-          Ми не маскуємо симптоми декоративним лаком. Наша мета — усунути корінь патології та повернути фізіологічно здорову стопу.
-        </p>
-      </div>
-
-      <!-- BENTO GRID (4 Distinct Architectural Cells) -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <!-- Cell 1: Medical Tandem -->
-        <div class="rounded-bento bg-white p-8 border border-[#EBE8E1] shadow-subtle flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-2xl bg-[#C5A374]-tint border border-taupe/15 text-[#B89355] flex items-center justify-center mb-6">
-              <i data-lucide="stethoscope" class="w-6 h-6"></i>
-            </div>
-            <h3 class="font-serif text-2xl font-bold text-[#111827] mb-3">Тандем з лікарями</h3>
-            <p class="text-sm text-[#4B5563] leading-relaxed">
-              Тісна взаємодія з дерматологами та хірургами. Направляємо на бактеріальні посіви, призначаємо скоординований догляд без сліпих маніпуляцій.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-[#EBE8E1] text-xs font-mono text-[#B89355]">
-            Офіційний протокол ведення
-          </div>
-        </div>
-
-        <!-- Cell 2: Hospital Grade Sterility -->
-        <div class="rounded-bento bg-white p-8 border border-[#EBE8E1] shadow-subtle flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-2xl bg-[#C5A374]-tint border border-taupe/15 text-[#B89355] flex items-center justify-center mb-6">
-              <i data-lucide="sparkles" class="w-6 h-6"></i>
-            </div>
-            <h3 class="font-serif text-2xl font-bold text-[#111827] mb-3">Хірургічна стерильність</h3>
-            <p class="text-sm text-[#4B5563] leading-relaxed">
-              Дезінфекція в ультразвуковій ванні, сушка, пакування в крафт-пакети та стерилізація в медичному сухожарі або автоклаві. Пакет відкривається виключно при вас.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-[#EBE8E1] text-xs font-mono text-[#B89355]">
-            Крафт-пакет розкривається при пацієнті
-          </div>
-        </div>
-
-        <!-- Cell 3: Titanium Non-Surgical Technology -->
-        <div class="rounded-bento bg-white p-8 border border-[#EBE8E1] shadow-subtle flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-2xl bg-[#C5A374]-tint border border-taupe/15 text-[#B89355] flex items-center justify-center mb-6">
-              <i data-lucide="activity" class="w-6 h-6"></i>
-            </div>
-            <h3 class="font-serif text-2xl font-bold text-[#111827] mb-3">Без болю та зрізання</h3>
-            <p class="text-sm text-[#4B5563] leading-relaxed">
-              Виправлення деформованих та врослих нігтів корекційними системами (титанова нитка, скоби). Зняття больового синдрому вже на першій процедурі.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-[#EBE8E1] text-xs font-mono text-[#B89355]">
-            Повернення до активного життя одразу
-          </div>
-        </div>
-
+  <!-- 4. CREDIBILITY & CLINICAL STRIP -->
+  <section class="border-y border-borderLight bg-[#FAF8F5] py-4 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="flex flex-wrap items-center justify-between gap-6 text-xs font-mono uppercase tracking-widest text-muted">
+        <span class="flex items-center gap-2">
+          <span class="text-forest font-bold">✓</span> Без болю й видалення нігтя
+        </span>
+        <span class="hidden md:inline text-borderLight">•</span>
+        <span class="flex items-center gap-2">
+          <span class="text-forest font-bold">✓</span> Титанова нитка та ортоніксія
+        </span>
+        <span class="hidden md:inline text-borderLight">•</span>
+        <span class="flex items-center gap-2">
+          <span class="text-forest font-bold">✓</span> Клінічний тандем із лікарями
+        </span>
+        <span class="hidden lg:inline text-borderLight">•</span>
+        <span class="flex items-center gap-2">
+          <span class="text-forest font-bold">✓</span> Автоклавування B-класу (134°C)
+        </span>
       </div>
     </div>
   </section>
 
-  <!-- INTERACTIVE BEFORE / AFTER SLIDER CLINICAL CASES -->
-  <section id="cases" class="py-16 md:py-24 border-b border-[#EBE8E1] bg-white overflow-hidden">
-    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+  <!-- 5. ABOUT KRISTINA & CLINICAL PHILOSOPHY -->
+  <section id="about" class="py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
       
-      <div class="max-w-2xl mb-12">
-        <span class="text-xs font-mono uppercase tracking-widest text-[#B89355] font-semibold block mb-2">Клінічна практика</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-[#111827] tracking-tight mb-4">
-          Результати терапії та відновлення
-        </h2>
-        <p class="text-[#4B5563] text-sm sm:text-base leading-relaxed">
-          Реальні результати пацієнтів Центру подології Христини Жалейко в Ірпені. Атравматичні методики, зняття больового синдрому з першого прийому та стійка динаміка загоєння.
-        </p>
-      </div>
-
-      <!-- CENTERED SIDE-BY-SIDE BEFORE / AFTER CARDS (Mobile-First, Strictly Centered Feet) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <!-- CARD 1: ДО ТЕРАПІЇ -->
-        <div class="bg-[#FBFBFA] rounded-2xl md:rounded-3xl border border-[#EBE8E1] p-5 sm:p-6 shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="px-3 py-1 rounded-full bg-rose-50 text-rose-700 font-mono text-xs font-bold border border-rose-200">
-                ДО ТЕРАПІЇ
-              </span>
-              <span class="text-xs font-mono text-[#9CA3AF]">Клінічний випадок #01</span>
-            </div>
-            
-            <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-white border border-[#EBE8E1] mb-5">
-              <img src="images/real/case_foot_before.jpg" alt="До лікування: гіперкератоз та сухість стопи" 
-                   class="w-full h-full object-cover hover:scale-105 transition duration-500">
-            </div>
-            
-            <h3 class="font-serif font-bold text-xl text-[#111827] mb-2">Гіперкератоз та глибокі омозолілості</h3>
-            <p class="text-sm text-[#4B5563] leading-relaxed">
-              Виражене потовщення рогового шару, болісний тиск при ходінні, сухість та мікротріщини. Попередні спроби самостійного зрізання стан лише погіршили.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-[#EBE8E1] text-xs font-mono text-[#B89355] flex items-center gap-1.5">
-            <i data-lucide="alert-circle" class="w-4 h-4 text-rose-500 shrink-0"></i>
-            <span>Первинний прийом та комплексна діагностика</span>
+        <!-- Big Quote Column -->
+        <div class="lg:col-span-5">
+          <span class="font-mono text-xs uppercase tracking-[0.2em] text-sand-600 font-semibold block mb-4">
+            Філософія центру
+          </span>
+          <blockquote class="font-serif text-3xl sm:text-4xl text-forest leading-[1.15] font-light mb-6">
+            «Подологія — це не просто педикюр. Це точна медицина турботи, де кожен рух майстра повертає радість вільного кроку без страху болю.»
+          </blockquote>
+          <div class="flex items-center gap-3 pt-2">
+            <div class="w-10 h-0.5 bg-sand-400"></div>
+            <span class="text-xs font-mono uppercase tracking-widest text-dark font-medium">
+              Христина Жалейко
+            </span>
           </div>
         </div>
 
-        <!-- CARD 2: ПІСЛЯ ЛІКУВАННЯ -->
-        <div class="bg-[#FBFBFA] rounded-2xl md:rounded-3xl border border-[#EBE8E1] p-5 sm:p-6 shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="px-3 py-1 rounded-full bg-[#EBF3EF] text-[#16382C] font-mono text-xs font-bold border border-[#16382C]/20">
-                ПІСЛЯ ВІДНОВЛЕННЯ
-              </span>
-              <span class="text-xs font-mono text-[#16382C] font-semibold">Повне загоєння • 3 тижні</span>
+        <!-- 3 Principles Column (Clean Minimalist List) -->
+        <div class="lg:col-span-7 flex flex-col gap-8">
+          
+          <div class="pb-6 border-b border-borderLight flex items-start gap-6">
+            <span class="font-mono text-xl text-sand-500 font-bold shrink-0">01</span>
+            <div>
+              <h3 class="font-serif text-2xl font-semibold text-dark mb-1">
+                Абсолютне збереження здорових тканин
+              </h3>
+              <p class="text-muted text-sm leading-relaxed font-light">
+                Ми категорично проти застарілих хірургічних методів зривання нігтьової пластини. Встановлення сучасних корекційних систем (титанова нитка, скоби) виправляє форму нігтя без реабілітаційного періоду.
+              </p>
             </div>
-            
-            <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-white border border-[#EBE8E1] mb-5">
-              <img src="images/real/case_foot_after.jpg" alt="Після лікування: гладенька відновлена шкіра стопи" 
-                   class="w-full h-full object-cover hover:scale-105 transition duration-500">
+          </div>
+
+          <div class="pb-6 border-b border-borderLight flex items-start gap-6">
+            <span class="font-mono text-xl text-sand-500 font-bold shrink-0">02</span>
+            <div>
+              <h3 class="font-serif text-2xl font-semibold text-dark mb-1">
+                Тандем із вузькими медичними спеціалістами
+              </h3>
+              <p class="text-muted text-sm leading-relaxed font-light">
+                Жодних самостійних експериментів із грибковими інфекціями чи гнійними запаленнями. Призначаємо аналізи, спрямовуємо до перевірених хірургів і дерматологів, ведучи пацієнта разом.
+              </p>
             </div>
-            
-            <h3 class="font-serif font-bold text-xl text-[#111827] mb-2">Здорова, гладенька та еластична шкіра</h3>
-            <p class="text-sm text-[#4B5563] leading-relaxed">
-              Апаратна обробка фрезами з водяним охолодженням, лікувальні оклюзійні пов'язки та професійний домашній догляд. Повне відновлення шкірного малюнка.
-            </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-[#EBE8E1] text-xs font-mono text-[#16382C] flex items-center gap-1.5">
-            <i data-lucide="check-circle" class="w-4 h-4 text-[#16382C] shrink-0"></i>
-            <span>Стійкий результат без рецидиву</span>
-          </div>
-        </div>
 
-      </div>
-
-      <!-- ADDITIONAL CASES GRID -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <div class="bg-[#FBFBFA] rounded-2xl p-5 border border-[#EBE8E1]">
-          <div class="aspect-square rounded-xl overflow-hidden bg-white border border-[#EBE8E1] mb-4">
-            <img src="images/real/case_nail_macro.jpg" alt="Корекція деформованого нігтя" class="w-full h-full object-cover">
+          <div class="flex items-start gap-6">
+            <span class="font-mono text-xl text-sand-500 font-bold shrink-0">03</span>
+            <div>
+              <h3 class="font-serif text-2xl font-semibold text-dark mb-1">
+                Атмосфера затишку без відчуття лікарні
+              </h3>
+              <p class="text-muted text-sm leading-relaxed font-light">
+                Преміальне німецьке обладнання, ортопедичні крісла підвищеного комфорту, кава та персональна увага. Ви отримуєте клінічну точність у комфорті вишуканого спа.
+              </p>
+            </div>
           </div>
-          <span class="text-xs font-mono text-[#B89355] font-semibold uppercase block mb-1">Ортоніксія</span>
-          <h4 class="font-serif font-bold text-[#111827] text-lg mb-1">Титанова нитка при вростанні</h4>
-          <p class="text-xs text-[#4B5563]">Зняття болю за 15 хвилин без видалення пластини та хірургічних швів.</p>
-        </div>
 
-        <div class="bg-[#FBFBFA] rounded-2xl p-5 border border-[#EBE8E1]">
-          <div class="aspect-square rounded-xl overflow-hidden bg-white border border-[#EBE8E1] mb-4">
-            <img src="images/uploaded/IMG_6400.jpg" alt="Медичний апаратний педикюр" class="w-full h-full object-cover">
-          </div>
-          <span class="text-xs font-mono text-[#16382C] font-semibold uppercase block mb-1">Апаратний догляд</span>
-          <h4 class="font-serif font-bold text-[#111827] text-lg mb-1">Медична обробка стопи</h4>
-          <p class="text-xs text-[#4B5563]">Німецькі спреєві апарати зі стерильними фрезами. Безпека при діабеті.</p>
-        </div>
-
-        <div class="bg-[#FBFBFA] rounded-2xl p-5 border border-[#EBE8E1] sm:col-span-2 lg:col-span-1">
-          <div class="aspect-square rounded-xl overflow-hidden bg-white border border-[#EBE8E1] mb-4">
-            <img src="images/uploaded/IMG_6530.jpg" alt="Анатомія та біомеханіка стопи" class="w-full h-full object-cover">
-          </div>
-          <span class="text-xs font-mono text-[#B89355] font-semibold uppercase block mb-1">Діагностика</span>
-          <h4 class="font-serif font-bold text-[#111827] text-lg mb-1">Аналіз навантаження стопи</h4>
-          <p class="text-xs text-[#4B5563]">Виявлення першопричини мозолів та натоптишів, рекомендація устілок.</p>
         </div>
 
       </div>
@@ -511,308 +387,431 @@
     </div>
   </section>
 
-  <!-- SERVICES AND PRICING (Clear, Authentic Medical Menu) -->
-  <section id="services" class="py-16 md:py-24 bg-[#FBFBFA] border-b border-[#EBE8E1]">
-    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+  <!-- 6. CLINICAL CASES: INTERACTIVE BEFORE / AFTER SLIDER -->
+  <section id="cases" class="py-16 sm:py-24 bg-[#F4EFE6] border-y border-borderLight">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
       
-      <div class="max-w-2xl mb-12">
-        <span class="text-xs font-mono uppercase tracking-[0.2em] text-[#B89355] block mb-2">Прозорий прайс</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-[#111827] tracking-tight mb-4">
-          Послуги Центру клінічної подології
-        </h2>
-        <p class="text-[#4B5563] text-base">
-          Усі маніпуляції виконуються стерильним інструментом на професійному обладнанні зі спреєвим охолодженням.
-        </p>
-      </div>
-
-      <!-- SERVICE CARDS GRID -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <!-- S1 -->
-        <div class="rounded-card bg-white p-6 border border-[#EBE8E1] shadow-subtle hover:border-taupe/40 transition flex flex-col justify-between">
-          <div>
-            <div class="flex justify-between items-start mb-4">
-              <span class="font-mono text-xs text-[#B89355] font-semibold">01 / ОРТОНІКСІЯ</span>
-              <span class="font-serif text-xl font-bold text-[#111827]">від 1 200 ₴</span>
-            </div>
-            <h3 class="font-serif text-xl font-bold text-[#111827] mb-2">Установка титанової нитки</h3>
-            <p class="text-sm text-[#4B5563] leading-relaxed mb-6">
-              Безопераційне виправлення деформації врослого або скрученого нігтя. Рівномірний тиск знімає біль з першого дня.
-            </p>
-          </div>
-          <a href="https://apnt.app/centr_estetik_life" target="_blank" class="text-xs font-semibold text-[#B89355] hover:text-[#B89355]-hover flex items-center gap-1 group">
-            <span>Обрати майстра та час</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition"></i>
-          </a>
-        </div>
-
-        <!-- S2 -->
-        <div class="rounded-card bg-white p-6 border border-[#EBE8E1] shadow-subtle hover:border-taupe/40 transition flex flex-col justify-between">
-          <div>
-            <div class="flex justify-between items-start mb-4">
-              <span class="font-mono text-xs text-[#B89355] font-semibold">02 / ТЕРАПІЯ</span>
-              <span class="font-serif text-xl font-bold text-[#111827]">від 800 ₴</span>
-            </div>
-            <h3 class="font-serif text-xl font-bold text-[#111827] mb-2">Обробка врослого нігтя</h3>
-            <p class="text-sm text-[#4B5563] leading-relaxed mb-6">
-              Атравматичне вивільнення кута нігтьової пластини, антисептична обробка запалення, тампонада каполіном.
-            </p>
-          </div>
-          <a href="https://apnt.app/centr_estetik_life" target="_blank" class="text-xs font-semibold text-[#B89355] hover:text-[#B89355]-hover flex items-center gap-1 group">
-            <span>Обрати майстра та час</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition"></i>
-          </a>
-        </div>
-
-        <!-- S3 -->
-        <div class="rounded-card bg-white p-6 border border-[#EBE8E1] shadow-subtle hover:border-taupe/40 transition flex flex-col justify-between">
-          <div>
-            <div class="flex justify-between items-start mb-4">
-              <span class="font-mono text-xs text-[#B89355] font-semibold">03 / ДОГЛЯД</span>
-              <span class="font-serif text-xl font-bold text-[#111827]">від 1 000 ₴</span>
-            </div>
-            <h3 class="font-serif text-xl font-bold text-[#111827] mb-2">Медичний педикюр</h3>
-            <p class="text-sm text-[#4B5563] leading-relaxed mb-6">
-              Комплексна апаратна обробка стоп та пальців при гіперкератозі, омозолілостях, потовщених нігтях і діабетичній стопі.
-            </p>
-          </div>
-          <a href="https://apnt.app/centr_estetik_life" target="_blank" class="text-xs font-semibold text-[#B89355] hover:text-[#B89355]-hover flex items-center gap-1 group">
-            <span>Обрати майстра та час</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition"></i>
-          </a>
-        </div>
-
-        <!-- S4 -->
-        <div class="rounded-card bg-white p-6 border border-[#EBE8E1] shadow-subtle hover:border-taupe/40 transition flex flex-col justify-between">
-          <div>
-            <div class="flex justify-between items-start mb-4">
-              <span class="font-mono text-xs text-[#B89355] font-semibold">04 / МІКОЛОГІЯ</span>
-              <span class="font-serif text-xl font-bold text-[#111827]">від 700 ₴</span>
-            </div>
-            <h3 class="font-serif text-xl font-bold text-[#111827] mb-2">Зачистка оніхомікозу (грибка)</h3>
-            <p class="text-sm text-[#4B5563] leading-relaxed mb-6">
-              Видалення ураженої частини нігтя, підготовка до нанесення лікарських засобів дерматолога, забір аналізу за потреби.
-            </p>
-          </div>
-          <a href="https://apnt.app/centr_estetik_life" target="_blank" class="text-xs font-semibold text-[#B89355] hover:text-[#B89355]-hover flex items-center gap-1 group">
-            <span>Обрати майстра та час</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition"></i>
-          </a>
-        </div>
-
-        <!-- S5 -->
-        <div class="rounded-card bg-white p-6 border border-[#EBE8E1] shadow-subtle hover:border-taupe/40 transition flex flex-col justify-between">
-          <div>
-            <div class="flex justify-between items-start mb-4">
-              <span class="font-mono text-xs text-[#B89355] font-semibold">05 / ДЕРМАТОЛОГІЯ</span>
-              <span class="font-serif text-xl font-bold text-[#111827]">від 500 ₴</span>
-            </div>
-            <h3 class="font-serif text-xl font-bold text-[#111827] mb-2">Видалення стрижневих мозолів</h3>
-            <p class="text-sm text-[#4B5563] leading-relaxed mb-6">
-              Безболісне висвердлювання твердого стрижня спеціальною фрезою з розвантаженням тиску. Біль зникає миттєво.
-            </p>
-          </div>
-          <a href="https://apnt.app/centr_estetik_life" target="_blank" class="text-xs font-semibold text-[#B89355] hover:text-[#B89355]-hover flex items-center gap-1 group">
-            <span>Обрати майстра та час</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition"></i>
-          </a>
-        </div>
-
-        <!-- S6: Academy Banner Card -->
-        <div class="rounded-card bg-[#C5A374] text-sand-canvas p-6 shadow-card flex flex-col justify-between">
-          <div>
-            <div class="flex justify-between items-start mb-4">
-              <span class="font-mono text-xs text-sand-card uppercase">АКАДЕМІЯ</span>
-              <i data-lucide="graduation-cap" class="w-6 h-6 text-sand-border"></i>
-            </div>
-            <h3 class="font-serif text-2xl font-bold text-white mb-2">Навчання для майстрів</h3>
-            <p class="text-sm text-sand-card/90 leading-relaxed mb-6">
-              Індивідуальні курси з постановкою руки: Базовий курс подології, Титанова нитка, робота зі складними стопами.
-            </p>
-          </div>
-          <a href="courses.html" class="inline-flex items-center justify-center px-4 py-2.5 rounded-pill bg-white text-[#111827] font-semibold text-xs hover:bg-white transition">
-            Переглянути програми курсів →
-          </a>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- MEDICAL TANDEM STATEMENT -->
-  
-  <!-- CLINIC ATMOSPHERE & MEDICAL STANDARDS GALLERY -->
-  <section class="py-16 md:py-20 border-b border-[#EBE8E1] bg-[#FBFBFA]">
-    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-      
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
         <div>
-          <span class="text-xs font-mono uppercase tracking-widest text-[#B89355] font-semibold block mb-2">Стандарти безпеки</span>
-          <h2 class="font-serif text-3xl sm:text-4xl font-normal text-[#111827] tracking-tight">
-            Атмосфера, стерильність та оснащення
+          <span class="font-mono text-xs uppercase tracking-[0.2em] text-sand-600 font-semibold block mb-2">
+            Доказова подологія • Результати
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-forest font-normal leading-tight">
+            Реальні клінічні випадки з практики
           </h2>
         </div>
-        <p class="text-[#4B5563] text-sm max-w-md">
-          Сучасний простір клінічної подології в Ірпені. Німецьке обладнання, стерилізаційні протоколи медичного класу та максимальний комфорт для кожного пацієнта.
+        <p class="text-muted text-sm max-w-md font-light">
+          Кожен випадок — це реальний пацієнт нашого центру в Ірпені. Потягніть бігунок для перегляду динаміки відновлення.
         </p>
       </div>
 
-      <!-- AUTHENTIC GALLERY OF 4 REAL CENTER ASSETS -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Slider Component Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         
-        <!-- ITEM 1: Вхідна зона та фірмова вивіска -->
-        <div class="group rounded-2xl overflow-hidden bg-white border border-[#EBE8E1] shadow-sm hover:shadow-md transition">
-          <div class="aspect-[3/4] overflow-hidden bg-[#FBFBFA]">
-            <img src="images/uploaded/IMG_6271.jpg" alt="KZ Podocenter — вхідна зона та фірмовий стенд" 
-                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
-          <div class="p-4 border-t border-[#EBE8E1]">
-            <div class="text-xs font-mono text-[#B89355] font-semibold mb-1">ВХІДНА ГРУПА</div>
-            <h4 class="font-serif font-bold text-[#111827] text-base">KZ Podocenter в Ірпені</h4>
-            <p class="text-xs text-[#4B5563] mt-1">Зручна локація, фірмова навігація та затишна зона очікування.</p>
+        <!-- Interactive Comparison Slider Container -->
+        <div class="lg:col-span-7 bg-[#FAF8F5] p-3 rounded-card border border-borderLight shadow-sm">
+          <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden select-none cursor-ew-resize" id="sliderContainer">
+            <!-- Background Image: AFTER -->
+            <img src="images/real/case_foot_after.jpg" alt="Результат після лікування стопи" class="absolute inset-0 w-full h-full object-cover">
+            <span class="absolute top-4 right-4 bg-forest text-paper text-[10px] font-mono tracking-widest uppercase px-3 py-1 rounded-full font-semibold z-10">
+              ПІСЛЯ
+            </span>
+
+            <!-- Clipped Image: BEFORE -->
+            <div class="clip-layer" id="clipLayer">
+              <img src="images/real/case_foot_before.jpg" alt="Стан стопи до процедури" class="absolute inset-0 w-full h-full object-cover max-w-none" id="beforeImg">
+              <span class="absolute top-4 left-4 bg-dark/80 backdrop-blur-sm text-paper text-[10px] font-mono tracking-widest uppercase px-3 py-1 rounded-full font-semibold z-10">
+                ДО
+              </span>
+            </div>
+
+            <!-- Draggable Divider Line -->
+            <div class="slider-handle flex items-center justify-center" id="sliderHandle">
+              <div class="w-8 h-8 rounded-full bg-paper border border-borderLight text-forest flex items-center justify-center shadow-lg">
+                <i data-lucide="chevrons-left-right" class="w-4 h-4"></i>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- ITEM 2: Стерилізаційна зона MELAG -->
-        <div class="group rounded-2xl overflow-hidden bg-white border border-[#EBE8E1] shadow-sm hover:shadow-md transition">
-          <div class="aspect-[3/4] overflow-hidden bg-[#FBFBFA]">
-            <img src="images/uploaded/IMG_6480.jpg" alt="Медична зона стерилізації MELAG" 
-                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
-          <div class="p-4 border-t border-[#EBE8E1]">
-            <div class="text-xs font-mono text-[#16382C] font-semibold mb-1">БЕЗПЕКА ЗА ДСТУ</div>
-            <h4 class="font-serif font-bold text-[#111827] text-base">Стерилізація MELAG</h4>
-            <p class="text-xs text-[#4B5563] mt-1">Автоклавування у крафт-пакетах, ультразвукова ванна та індикатори.</p>
-          </div>
-        </div>
-
-        <!-- ITEM 3: Діагностика та біомеханіка стопи -->
-        <div class="group rounded-2xl overflow-hidden bg-white border border-[#EBE8E1] shadow-sm hover:shadow-md transition">
-          <div class="aspect-[3/4] overflow-hidden bg-[#FBFBFA]">
-            <img src="images/uploaded/IMG_6530.jpg" alt="Христина Жалейко проводить біомеханічну діагностику" 
-                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
-          <div class="p-4 border-t border-[#EBE8E1]">
-            <div class="text-xs font-mono text-[#B89355] font-semibold mb-1">ДІАГНОСТИКА</div>
-            <h4 class="font-serif font-bold text-[#111827] text-base">Анатомія та біомеханіка</h4>
-            <p class="text-xs text-[#4B5563] mt-1">Аналіз навантаження на стопу, склепіння та підбір індивідуальних устілок.</p>
-          </div>
-        </div>
-
-        <!-- ITEM 4: Простір та кабінет прийому -->
-        <div class="group rounded-2xl overflow-hidden bg-white border border-[#EBE8E1] shadow-sm hover:shadow-md transition">
-          <div class="aspect-[3/4] overflow-hidden bg-[#FBFBFA]">
-            <img src="images/uploaded/IMG_6627.jpg" alt="Кабінет прийому та ергономічне крісло пацієнта" 
-                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
-          <div class="p-4 border-t border-[#EBE8E1]">
-            <div class="text-xs font-mono text-[#16382C] font-semibold mb-1">КОМФОРТ ПАЦІЄНТА</div>
-            <h4 class="font-serif font-bold text-[#111827] text-base">Кабінет прийому</h4>
-            <p class="text-xs text-[#4B5563] mt-1">Ергономічне регульоване крісло, спреєві апарати та бездоганна гігієна.</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <section id="tandem" class="py-16 md:py-24 border-b border-[#EBE8E1]">
-    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-      
-      <div class="rounded-bento bg-[#FBFBFA] p-8 sm:p-12 border border-[#EBE8E1] relative overflow-hidden">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
-          <div class="lg:col-span-8">
-            <span class="text-xs font-mono uppercase tracking-[0.2em] text-[#B89355] block mb-3">Чому нам довіряють складні випадки</span>
-            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-[#111827] tracking-tight mb-4">
-              Співпраця з лікарями хірургами та дерматологами
-            </h2>
-            <p class="text-[#4B5563] text-base leading-relaxed mb-6">
-              Подологія — це прикордонна галузь між естетикою та медициною. Якщо випадок потребує медикаментозного лікування системного грибка, хірургічної пластики валика або ортопедичних устілок, ми направляємо пацієнта до перевірених профільних лікарів та ведемо реабілітацію разом.
+        <!-- Case Story Card -->
+        <div class="lg:col-span-5 flex flex-col justify-between">
+          <div class="bg-[#FAF8F5] border border-borderLight rounded-card p-8 mb-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[11px] font-mono uppercase tracking-wider text-forest font-semibold bg-forest-light px-2.5 py-1 rounded-md">
+                Клінічний протокол
+              </span>
+              <span class="text-xs font-mono text-muted">Кейс #0824</span>
+            </div>
+            
+            <h3 class="font-serif text-2xl font-semibold text-dark mb-3">
+              Гіперкератоз і глибокі болючі тріщини п'ят
+            </h3>
+            
+            <p class="text-muted text-xs sm:text-sm leading-relaxed mb-6 font-light">
+              Пацієнтка звернулася з сильним больовим синдромом при ходьбі. Було виконано апаратне видалення ороговілого шару без пошкодження живої тканини, розвантаження та підібрано ліпідну косметику для домашнього відновлення.
             </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div class="flex items-center gap-3 text-sm text-[#111827]">
-                <i data-lucide="check" class="w-5 h-5 text-[#B89355]"></i>
-                <span>Жодного самолікування без аналізів</span>
+
+            <div class="grid grid-cols-2 gap-4 pt-4 border-t border-borderLight text-xs">
+              <div>
+                <span class="text-muted block text-[11px] font-mono uppercase">Тривалість курсу</span>
+                <span class="font-semibold text-dark">2 візити (30 днів)</span>
               </div>
-              <div class="flex items-center gap-3 text-sm text-[#111827]">
-                <i data-lucide="check" class="w-5 h-5 text-[#B89355]"></i>
-                <span>Безпечно для вагітних та людей з діабетом</span>
+              <div>
+                <span class="text-muted block text-[11px] font-mono uppercase">Поточний стан</span>
+                <span class="font-semibold text-forest">Повне загоєння 100%</span>
               </div>
             </div>
           </div>
 
-          <div class="lg:col-span-4 flex justify-center">
-            <div class="rounded-card overflow-hidden border border-[#EBE8E1] shadow-subtle max-w-xs">
-              <img src="images/uploaded/IMG_4490.jpg" alt="Простір KZ Podocenter Kristina Zhaleyko" class="w-full h-auto object-cover">
+          <!-- Secondary Case Thumbnails (Clean Dribbble Bento) -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-[#FAF8F5] border border-borderLight rounded-2xl p-3 flex items-center gap-3">
+              <img src="images/real/case_nail_macro.jpg" alt="Титанова нитка" class="w-12 h-12 rounded-xl object-cover shrink-0">
+              <div>
+                <span class="font-serif text-sm font-semibold text-dark block leading-snug">Врослий ніготь</span>
+                <span class="text-[11px] font-mono text-muted">Титанова нитка</span>
+              </div>
+            </div>
+
+            <div class="bg-[#FAF8F5] border border-borderLight rounded-2xl p-3 flex items-center gap-3">
+              <img src="images/real/orthotics_insoles.jpg" alt="Ортопедичні устілки" class="w-12 h-12 rounded-xl object-cover shrink-0">
+              <div>
+                <span class="font-serif text-sm font-semibold text-dark block leading-snug">Індивідуальні устілки</span>
+                <span class="text-[11px] font-mono text-muted">Корекція ходи</span>
+              </div>
             </div>
           </div>
 
         </div>
+
       </div>
 
     </div>
   </section>
 
-  <!-- REVIEWS (Authentic Apnt.app Patient Feedback) -->
-  <section id="reviews" class="py-16 md:py-24 bg-[#FBFBFA]/20 border-b border-[#EBE8E1]">
-    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+  <!-- 7. SERVICES & TRANSPARENT PRICING (Dribbble shot_1 Minimalist Catalog) -->
+  <section id="services" class="py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
       
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-xs font-mono uppercase tracking-[0.2em] text-[#B89355] block mb-2">Відгуки пацієнтів</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-[#111827] tracking-tight mb-3">
-          Довіра, підтверджена сотнями здорових стоп
-        </h2>
-        <div class="flex items-center justify-center gap-1 text-amber-500">
-          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-          <span class="text-xs font-mono text-[#4B5563] ml-2">5.0 / 5.0 на apnt.app</span>
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-[0.2em] text-sand-600 font-semibold block mb-2">
+            Прайс-лист та послуги
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-forest font-normal leading-tight">
+            Клінічні процедури центру
+          </h2>
         </div>
+        <a href="https://apnt.app/centr_estetik_life" target="_blank" class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-forest font-bold hover:text-sand-600 transition">
+          <span>Переглянути вільні віконця в календарі</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- Services Grid (Clean editorial cards with subtle hairlines) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Card 1 -->
+        <div class="bg-[#F4EFE6] border border-borderLight rounded-card p-6 sm:p-8 flex flex-col justify-between hover:border-sand-500 transition-colors duration-200">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="font-mono text-xs text-sand-600 uppercase tracking-wider font-semibold">
+                01 • Діагностика
+              </span>
+              <span class="font-serif text-xl font-bold text-forest">від 400 ₴</span>
+            </div>
+            <h3 class="font-serif text-2xl font-semibold text-dark mb-2">
+              Первинна консультація подолога
+            </h3>
+            <p class="text-muted text-xs leading-relaxed mb-6 font-light">
+              Повний огляд стоп, дерматоскопія нігтів, оцінка деформацій, постановка діагнозу та складання індивідуального плану терапії.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-borderLight flex items-center justify-between text-xs">
+            <span class="text-muted font-mono">30 хв</span>
+            <a href="https://apnt.app/centr_estetik_life" target="_blank" class="font-semibold text-forest hover:text-sand-700 transition flex items-center gap-1">
+              <span>Записатись</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-[#F4EFE6] border border-borderLight rounded-card p-6 sm:p-8 flex flex-col justify-between hover:border-sand-500 transition-colors duration-200">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="font-mono text-xs text-sand-600 uppercase tracking-wider font-semibold">
+                02 • Ортоніксія
+              </span>
+              <span class="font-serif text-xl font-bold text-forest">від 1 200 ₴</span>
+            </div>
+            <h3 class="font-serif text-2xl font-semibold text-dark mb-2">
+              Встановлення титанової нитки
+            </h3>
+            <p class="text-muted text-xs leading-relaxed mb-6 font-light">
+              Безболісна корекція врослого та деформованого нігтя. Сплав нікель-титану випрямляє форму нігтя та миттєво знімає біль без операції.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-borderLight flex items-center justify-between text-xs">
+            <span class="text-muted font-mono">45 хв</span>
+            <a href="https://apnt.app/centr_estetik_life" target="_blank" class="font-semibold text-forest hover:text-sand-700 transition flex items-center gap-1">
+              <span>Записатись</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-[#F4EFE6] border border-borderLight rounded-card p-6 sm:p-8 flex flex-col justify-between hover:border-sand-500 transition-colors duration-200">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="font-mono text-xs text-sand-600 uppercase tracking-wider font-semibold">
+                03 • Терапія
+              </span>
+              <span class="font-serif text-xl font-bold text-forest">від 900 ₴</span>
+            </div>
+            <h3 class="font-serif text-2xl font-semibold text-dark mb-2">
+              Медичний апаратний педикюр
+            </h3>
+            <p class="text-muted text-xs leading-relaxed mb-6 font-light">
+              Гігієнічна й терапевтична обробка проблемних стоп: гіперкератоз, сухість, мозолі, потовщені нігті. Без замочування, стерильно.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-borderLight flex items-center justify-between text-xs">
+            <span class="text-muted font-mono">60–80 хв</span>
+            <a href="https://apnt.app/centr_estetik_life" target="_blank" class="font-semibold text-forest hover:text-sand-700 transition flex items-center gap-1">
+              <span>Записатись</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-[#F4EFE6] border border-borderLight rounded-card p-6 sm:p-8 flex flex-col justify-between hover:border-sand-500 transition-colors duration-200">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="font-mono text-xs text-sand-600 uppercase tracking-wider font-semibold">
+                04 • Складні випадки
+              </span>
+              <span class="font-serif text-xl font-bold text-forest">від 600 ₴</span>
+            </div>
+            <h3 class="font-serif text-2xl font-semibold text-dark mb-2">
+              Обробка врослого кута та тампонада
+            </h3>
+            <p class="text-muted text-xs leading-relaxed mb-6 font-light">
+              Атравматичне вивільнення врослого сегмента нігтя, знезараження запаленої зони, накладання лікувальної розвантажувальної кополінової пов'язки.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-borderLight flex items-center justify-between text-xs">
+            <span class="text-muted font-mono">30 хв</span>
+            <a href="https://apnt.app/centr_estetik_life" target="_blank" class="font-semibold text-forest hover:text-sand-700 transition flex items-center gap-1">
+              <span>Записатись</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-[#F4EFE6] border border-borderLight rounded-card p-6 sm:p-8 flex flex-col justify-between hover:border-sand-500 transition-colors duration-200">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="font-mono text-xs text-sand-600 uppercase tracking-wider font-semibold">
+                05 • Тріщини & Мозолі
+              </span>
+              <span class="font-serif text-xl font-bold text-forest">від 750 ₴</span>
+            </div>
+            <h3 class="font-serif text-2xl font-semibold text-dark mb-2">
+              Лікування глибоких тріщин п'ят
+            </h3>
+            <p class="text-muted text-xs leading-relaxed mb-6 font-light">
+              Шліфування країв тріщин, розвантажувальні оклюзійні пов'язки з кератолітиками, підбір щоденного лікувального крему.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-borderLight flex items-center justify-between text-xs">
+            <span class="text-muted font-mono">40 хв</span>
+            <a href="https://apnt.app/centr_estetik_life" target="_blank" class="font-semibold text-forest hover:text-sand-700 transition flex items-center gap-1">
+              <span>Записатись</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 6: Ortotics -->
+        <div class="bg-[#F4EFE6] border border-borderLight rounded-card p-6 sm:p-8 flex flex-col justify-between hover:border-sand-500 transition-colors duration-200">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="font-mono text-xs text-sand-600 uppercase tracking-wider font-semibold">
+                06 • Біомеханіка
+              </span>
+              <span class="font-serif text-xl font-bold text-forest">від 1 800 ₴</span>
+            </div>
+            <h3 class="font-serif text-2xl font-semibold text-dark mb-2">
+              Індивідуальні ортопедичні устілки
+            </h3>
+            <p class="text-muted text-xs leading-relaxed mb-6 font-light">
+              Комп'ютерне сканування навантаження на стопу. Моделювання індивідуальних каркасних або силіконових ортезів під ваше взуття.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-borderLight flex items-center justify-between text-xs">
+            <span class="text-muted font-mono">45 хв</span>
+            <a href="https://apnt.app/centr_estetik_life" target="_blank" class="font-semibold text-forest hover:text-sand-700 transition flex items-center gap-1">
+              <span>Записатись</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8. CLINIC SPACE & ATMOSPHERE (Editorial Masonry) -->
+  <section class="py-16 sm:py-24 bg-[#FAF8F5] border-t border-borderLight">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      
+      <div class="max-w-2xl mb-12">
+        <span class="font-mono text-xs uppercase tracking-[0.2em] text-sand-600 font-semibold block mb-2">
+          Простір нашого центру
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-forest font-normal leading-tight">
+          Затишок та чистота в серці Ірпеня
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Photo 1: Physical entrance sign -->
+        <div class="rounded-card overflow-hidden bg-sand-100 aspect-[4/3] relative group shadow-sm">
+          <img src="images/uploaded/IMG_6271.jpg" alt="Вхідна група центру подології Христини Жалейко" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent"></div>
+          <span class="absolute bottom-4 left-4 text-xs font-mono text-paper font-medium">
+            Фасад центру • вул. Г. Сковороди 11/3
+          </span>
+        </div>
+
+        <!-- Photo 2: Orchid and cabinet workspace -->
+        <div class="rounded-card overflow-hidden bg-sand-100 aspect-[4/3] relative group shadow-sm">
+          <img src="images/uploaded/IMG_4490.jpg" alt="Робоче місце подолога та живі орхідеї" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent"></div>
+          <span class="absolute bottom-4 left-4 text-xs font-mono text-paper font-medium">
+            Стерильний кабінет преміум-класу
+          </span>
+        </div>
+
+        <!-- Photo 3: Procedure details -->
+        <div class="rounded-card overflow-hidden bg-sand-100 aspect-[4/3] relative group shadow-sm">
+          <img src="images/uploaded/IMG_6400.jpg" alt="Процес консультації в кабінеті" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent"></div>
+          <span class="absolute bottom-4 left-4 text-xs font-mono text-paper font-medium">
+            Уважна діагностика кожного пацієнта
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 9. MEDICAL TANDEM (Why we succeed where others fail) -->
+  <section id="tandem" class="py-16 sm:py-24 bg-[#F4EFE6] border-t border-borderLight">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      
+      <div class="bg-forest text-paper rounded-[32px] p-8 sm:p-14 relative overflow-hidden shadow-xl">
+        <!-- Subtle Glow Circle -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-forest-glow/30 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+          
+          <div class="lg:col-span-7">
+            <span class="font-mono text-xs uppercase tracking-[0.2em] text-sand-300 font-semibold block mb-3">
+              Професійний стандарт • Тандем
+            </span>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-paper font-normal leading-tight mb-6">
+              Ми не лікуємо наосліп. Ми працюємо пліч-о-пліч з лікарями.
+            </h2>
+            <p class="text-paper/80 text-sm sm:text-base leading-relaxed font-light mb-8 max-w-xl">
+              Багато проблем нігтів (грибок, оніхолізис, тріщини при цукровому діабеті) мають глибинні системні причини. Христина Жалейко веде пацієнтів у тісній взаємодії з дерматологами, хірургами та ендокринологами, гарантуючи стійкий результат без рецидивів.
+            </p>
+
+            <div class="flex flex-wrap gap-4 text-xs font-mono">
+              <span class="bg-paper/10 border border-paper/20 px-4 py-2 rounded-full">
+                Дерматоскопія та аналізи
+              </span>
+              <span class="bg-paper/10 border border-paper/20 px-4 py-2 rounded-full">
+                Безпека діабетичної стопи
+              </span>
+              <span class="bg-paper/10 border border-paper/20 px-4 py-2 rounded-full">
+                Спільний супровід з лікарем
+              </span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 bg-paper/5 border border-paper/10 backdrop-blur-md rounded-2xl p-6 sm:p-8">
+            <div class="font-serif text-xl font-semibold mb-2">
+              Потрібна попередня оцінка?
+            </div>
+            <p class="text-xs text-paper/70 font-light mb-6 leading-relaxed">
+              Ви можете надіслати фото проблеми нам у Telegram для попереднього експертного висновку подолога.
+            </p>
+            <a href="https://t.me/IZIPC" target="_blank" class="inline-flex items-center justify-center gap-2 w-full bg-sand-500 hover:bg-sand-600 text-paper py-3.5 px-6 rounded-pill text-xs font-semibold uppercase tracking-wider transition shadow-sm">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Надіслати фото в Telegram</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 10. REVIEWS & TESTIMONIALS -->
+  <section id="reviews" class="py-16 sm:py-24 bg-[#FAF8F5]">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      
+      <div class="max-w-2xl mb-12">
+        <span class="font-mono text-xs uppercase tracking-[0.2em] text-sand-600 font-semibold block mb-2">
+          Відгуки наших пацієнтів
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-forest font-normal leading-tight">
+          Слова тих, кому ми повернули легкість ходи
+        </h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
-        <div class="rounded-card bg-white p-6 border border-[#EBE8E1] shadow-subtle flex flex-col justify-between">
-          <p class="text-sm text-[#111827] leading-relaxed italic mb-6">
-            "Христина буквально врятувала мій палець. Більше року мучилася із врослим нігтем, боялася йти до хірурга. Встановили титанову нитку за 20 хвилин, абсолютно безболісно! Біль минув у той же вечір."
+        <div class="bg-[#F4EFE6] border border-borderLight rounded-card p-6 sm:p-8 flex flex-col justify-between">
+          <p class="text-dark text-sm sm:text-base font-serif italic leading-relaxed mb-6">
+            «Христина буквально врятувала мій ніготь від хірургічного зривання. Більше року мучилася, боялася йти до лікарів. Титанова нитка за 20 хвилин зняла біль, а зараз ніготь абсолютно рівний і здоровий!»
           </p>
-          <div class="flex items-center justify-between pt-4 border-t border-[#EBE8E1]">
-            <div>
-              <div class="font-semibold text-sm text-[#111827]">Олена Мельник</div>
-              <div class="text-xs text-[#4B5563]">м. Ірпінь • Корекція нігтя</div>
-            </div>
-            <i data-lucide="badge-check" class="w-5 h-5 text-[#B89355]"></i>
+          <div class="pt-4 border-t border-borderLight flex items-center justify-between text-xs">
+            <span class="font-medium text-dark">Олена М. (Ірпінь)</span>
+            <span class="text-forest font-mono">Врослий ніготь</span>
           </div>
         </div>
 
-        <div class="rounded-card bg-white p-6 border border-[#EBE8E1] shadow-subtle flex flex-col justify-between">
-          <p class="text-sm text-[#111827] leading-relaxed italic mb-6">
-            "Привів сина 12 років після невдалої спроби самостійно зрізати кутик нігтя. Лікар підійшла неймовірно делікатно, дитина навіть не злякалася. Стерильність вражає — все запаковано, ідеальна чистота."
+        <div class="bg-[#F4EFE6] border border-borderLight rounded-card p-6 sm:p-8 flex flex-col justify-between">
+          <p class="text-dark text-sm sm:text-base font-serif italic leading-relaxed mb-6">
+            «Неймовірно стерильний і приємний центр. Жодного дискомфорту під час медичного педикюру, все чітко, професійно, в крафт-пакетах. Тепер за доглядом стоп — тільки до Христини.»
           </p>
-          <div class="flex items-center justify-between pt-4 border-t border-[#EBE8E1]">
-            <div>
-              <div class="font-semibold text-sm text-[#111827]">Сергій Коваленко</div>
-              <div class="text-xs text-[#4B5563]">м. Буча • Дитяча подологія</div>
-            </div>
-            <i data-lucide="badge-check" class="w-5 h-5 text-[#B89355]"></i>
+          <div class="pt-4 border-t border-borderLight flex items-center justify-between text-xs">
+            <span class="font-medium text-dark">Тетяна В. (Буча)</span>
+            <span class="text-forest font-mono">Апаратний педикюр</span>
           </div>
         </div>
 
-        <div class="rounded-card bg-white p-6 border border-[#EBE8E1] shadow-subtle flex flex-col justify-between">
-          <p class="text-sm text-[#111827] leading-relaxed italic mb-6">
-            "Ходжу на медичний педикюр регулярно вже понад рік через особливості шкіри. Жодних мозолів чи натоптишів. Справжній експерт своєї справи та дуже затишний простір."
+        <div class="bg-[#F4EFE6] border border-borderLight rounded-card p-6 sm:p-8 flex flex-col justify-between">
+          <p class="text-dark text-sm sm:text-base font-serif italic leading-relaxed mb-6">
+            «Глибокі тріщини на п'ятах не давали спокійно ходити влітку. Після першого ж прийому відчув полегшення. Дякую за детальні поради щодо домашнього догляду!»
           </p>
-          <div class="flex items-center justify-between pt-4 border-t border-[#EBE8E1]">
-            <div>
-              <div class="font-semibold text-sm text-[#111827]">Марина Василенко</div>
-              <div class="text-xs text-[#4B5563]">м. Ірпінь • Апаратний догляд</div>
-            </div>
-            <i data-lucide="badge-check" class="w-5 h-5 text-[#B89355]"></i>
+          <div class="pt-4 border-t border-borderLight flex items-center justify-between text-xs">
+            <span class="font-medium text-dark">Сергій К. (Київ)</span>
+            <span class="text-forest font-mono">Тріщини стоп</span>
           </div>
         </div>
 
@@ -821,70 +820,151 @@
     </div>
   </section>
 
-  <!-- APPOINTMENT BOOKING CTA -->
-  <section class="py-16 md:py-24 bg-[#C5A374] text-sand-canvas">
-    <div class="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-serif text-3xl sm:text-5xl font-normal text-white mb-6">
-        Зробіть перший крок до здорових стоп без болю
-      </h2>
-      <p class="text-sand-card text-base sm:text-lg mb-8 max-w-xl mx-auto">
-        Оберіть зручний для вас день та час у системі онлайн-запису або зателефонуйте адміністратору напряму.
-      </p>
-
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="https://apnt.app/centr_estetik_life" target="_blank" rel="noopener noreferrer"
-           class="w-full sm:w-auto px-8 py-4 rounded-pill bg-white text-[#111827] text-base font-bold hover:bg-white transition shadow-card flex items-center justify-center gap-2">
-          <i data-lucide="calendar" class="w-5 h-5 text-[#B89355]"></i>
-          Записатися через онлайн-календар
-        </a>
-        <a href="tel:+380960447041"
-           class="w-full sm:w-auto px-8 py-4 rounded-pill bg-[#C5A374]-hover border border-white/20 text-white text-base font-medium hover:bg-[#C5A374]-dark transition flex items-center justify-center gap-2">
-          <i data-lucide="phone" class="w-5 h-5"></i>
-          +38 (096) 044 70 41
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-[#FBFBFA] py-12 border-t border-[#EBE8E1] text-sm text-[#4B5563]">
-    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-      <div class="flex flex-col items-center md:items-start">
-        <span class="font-serif text-2xl font-bold text-[#111827]">KZ PODOCENTER</span>
-        <span class="text-xs">Центр клінічної подології Христини Жалейко</span>
-        <span class="text-xs text-body-soft mt-1">м. Ірпінь, вул. Григорія Сковороди, 11/3</span>
-      </div>
-
-      <div class="flex items-center gap-6">
-        <a href="index.html" class="hover:text-[#B89355] transition">Головна</a>
+  <!-- 11. CONTACT & APPOINTMENT BOOKING (Dribbble Lead Form) -->
+  <section id="contacts" class="py-16 sm:py-24 bg-[#F4EFE6] border-t border-borderLight">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <a href="courses.html" class="text-[#B89355] font-semibold hover:underline">Курси для майстрів</a>
-        <a href="https://www.instagram.com/kristina.zhaleyko" target="_blank" class="hover:text-[#B89355] transition">Instagram</a>
+        <!-- Left: Quick Direct Booking & Contacts -->
+        <div class="lg:col-span-6">
+          <span class="font-mono text-xs uppercase tracking-[0.2em] text-sand-600 font-semibold block mb-3">
+            Контакти та локація
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-forest font-normal leading-tight mb-6">
+            Завітайте до нашого простору в Ірпені
+          </h2>
+          <p class="text-muted text-sm sm:text-base leading-relaxed font-light mb-8 max-w-lg">
+            Центр розташований у затишному районі міста зі зручним під'їздом та паркінгом. Працюємо за попереднім записом.
+          </p>
+
+          <div class="flex flex-col gap-4 text-sm mb-8">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-full bg-forest-light text-forest flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="font-semibold text-dark block">Адреса:</span>
+                <span class="text-muted text-xs sm:text-sm">м. Ірпінь, вул. Григорія Сковороди, 11/3</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-full bg-forest-light text-forest flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="font-semibold text-dark block">Телефон:</span>
+                <a href="tel:+380960447041" class="text-forest hover:underline font-mono text-xs sm:text-sm font-medium">
+                  +38 (096) 044 70 41
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-full bg-forest-light text-forest flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="clock" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="font-semibold text-dark block">Графік прийому:</span>
+                <span class="text-muted text-xs sm:text-sm">Понеділок – Субота: 09:00 – 20:00 (за записом)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <a href="https://www.instagram.com/kristina.zhaleyko" target="_blank" class="flex items-center gap-2 border border-borderLight bg-paper hover:border-sand-500 text-xs font-mono uppercase tracking-wider px-4 py-2.5 rounded-full text-dark transition">
+              <i data-lucide="instagram" class="w-4 h-4 text-sand-500"></i>
+              <span>Instagram</span>
+            </a>
+            <a href="https://t.me/IZIPC" target="_blank" class="flex items-center gap-2 border border-borderLight bg-paper hover:border-sand-500 text-xs font-mono uppercase tracking-wider px-4 py-2.5 rounded-full text-dark transition">
+              <i data-lucide="send" class="w-4 h-4 text-sand-500"></i>
+              <span>Telegram</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right: Modern Appointment Card leading directly to apnt.app -->
+        <div class="lg:col-span-6 bg-[#FAF8F5] border border-borderLight rounded-card p-8 sm:p-12 shadow-sm">
+          <span class="font-mono text-[11px] uppercase tracking-wider text-sand-600 font-semibold block mb-2">
+            Цілодобовий онлайн-розклад
+          </span>
+          <h3 class="font-serif text-3xl font-semibold text-forest mb-4">
+            Оберіть зручний час візиту
+          </h3>
+          <p class="text-muted text-xs sm:text-sm font-light leading-relaxed mb-8">
+            Виберіть потрібну послугу та вільне віконце безпосередньо в електронній системі запису нашого центру. Без очікування відповіді адміністратора.
+          </p>
+
+          <a href="https://apnt.app/centr_estetik_life" target="_blank" class="w-full group bg-forest text-paper hover:bg-forest-dark py-4 px-8 rounded-pill flex items-center justify-between transition-all shadow-md hover:shadow-lg mb-4">
+            <span class="text-xs sm:text-sm uppercase tracking-[0.15em] font-semibold">
+              Відкрити календар онлайн-запису
+            </span>
+            <div class="w-8 h-8 rounded-full bg-paper/10 flex items-center justify-center group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform">
+              <i data-lucide="calendar" class="w-4 h-4 text-paper"></i>
+            </div>
+          </a>
+
+          <p class="text-center text-[11px] text-muted font-mono">
+            🔒 Підтвердження запису надходить миттєво в SMS або месенджер
+          </p>
+        </div>
+
       </div>
 
-      <div class="text-xs text-body-soft text-center md:text-right">
-        © 2026 Всі права захищено.<br>Створено за стандартами професійної подологічної практики.
+    </div>
+  </section>
+
+  <!-- 12. MINIMAL EDITORIAL FOOTER -->
+  <footer class="bg-forest text-paper py-12 border-t border-forest-soft">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-paper/10 flex items-center justify-center font-serif text-base font-bold">
+          KZ
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-base tracking-[0.15em] uppercase font-semibold leading-none">
+            Центр подології Христини Жалейко
+          </span>
+          <span class="font-mono text-[9px] uppercase tracking-widest text-paper/60 mt-1">
+            м. Ірпінь • вул. Григорія Сковороди, 11/3
+          </span>
+        </div>
       </div>
+
+      <div class="flex flex-wrap items-center gap-6 text-xs text-paper/70 font-mono">
+        <a href="courses.html" class="hover:text-paper transition">Академія подології</a>
+        <a href="#services" class="hover:text-paper transition">Послуги</a>
+        <a href="https://apnt.app/centr_estetik_life" target="_blank" class="hover:text-paper transition">Онлайн-запис</a>
+        <a href="#contacts" class="hover:text-paper transition">Контакти</a>
+      </div>
+
+      <div class="text-xs text-paper/50 font-mono">
+        © 2026 KZ Podocenter. Всі права захищено.
+      </div>
+
     </div>
   </footer>
 
-  <!-- MOBILE STICKY THUMB-BAR (For Rapid Mobile Booking) -->
-  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md p-3 border-t border-[#EBE8E1] flex items-center gap-3">
-    <a href="tel:+380960447041" class="p-3 rounded-pill bg-[#FBFBFA] border border-[#EBE8E1] text-[#B89355] flex items-center justify-center shrink-0">
-      <i data-lucide="phone" class="w-5 h-5"></i>
+  <!-- 13. FLOATING MOBILE QUICK-BAR -->
+  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md border-t border-borderLight p-3.5 flex items-center gap-3">
+    <a href="tel:+380960447041" class="w-12 h-12 rounded-full border border-borderLight flex items-center justify-center text-dark shrink-0 hover:bg-sand-100 transition">
+      <i data-lucide="phone" class="w-5 h-5 text-forest"></i>
     </a>
-    <a href="https://apnt.app/centr_estetik_life" target="_blank" class="flex-1 py-3 px-4 rounded-pill bg-[#C5A374] text-white text-center font-bold text-sm flex items-center justify-center gap-2 shadow">
-      <i data-lucide="calendar" class="w-4 h-4"></i>
-      Записатися на прийом
+    <a href="https://apnt.app/centr_estetik_life" target="_blank" class="flex-1 bg-forest text-paper text-center py-3.5 px-4 rounded-full text-xs font-semibold uppercase tracking-wider shadow-md">
+      Записатися онлайн 24/7
     </a>
   </div>
 
-  <!-- CLIENT SCRIPTS -->
+  <!-- Lucide & Interactive Scripts -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Initialize icons
       if (window.lucide) window.lucide.createIcons();
 
-      // Mobile Drawer Toggle
+      // Mobile Drawer logic
       const menuBtn = document.getElementById('mobileMenuBtn');
       const closeBtn = document.getElementById('closeDrawerBtn');
       const drawer = document.getElementById('mobileDrawer');
@@ -905,12 +985,60 @@
         document.body.style.overflow = '';
       }
 
-      menuBtn?.addEventListener('click', openDrawer);
-      closeBtn?.addEventListener('click', closeDrawer);
-      overlay?.addEventListener('click', closeDrawer);
+      if (menuBtn) menuBtn.addEventListener('click', openDrawer);
+      if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+      if (overlay) overlay.addEventListener('click', closeDrawer);
       drawerLinks.forEach(link => link.addEventListener('click', closeDrawer));
 
-      // Touch optimization complete
+      // Before / After Slider Logic
+      const container = document.getElementById('sliderContainer');
+      const clipLayer = document.getElementById('clipLayer');
+      const handle = document.getElementById('sliderHandle');
+      const beforeImg = document.getElementById('beforeImg');
+
+      if (container && clipLayer && handle && beforeImg) {
+        let isDown = false;
+
+        function updateSlider(x) {
+          const rect = container.getBoundingClientRect();
+          let pos = ((x - rect.left) / rect.width) * 100;
+          if (pos < 0) pos = 0;
+          if (pos > 100) pos = 100;
+
+          clipLayer.style.width = pos + '%';
+          handle.style.left = pos + '%';
+          beforeImg.style.width = rect.width + 'px';
+        }
+
+        // Adjust beforeImg width on resize
+        function syncImgWidth() {
+          const rect = container.getBoundingClientRect();
+          beforeImg.style.width = rect.width + 'px';
+        }
+        window.addEventListener('resize', syncImgWidth);
+        syncImgWidth();
+
+        container.addEventListener('mousedown', (e) => {
+          isDown = true;
+          updateSlider(e.clientX);
+        });
+        window.addEventListener('mouseup', () => isDown = false);
+        window.addEventListener('mousemove', (e) => {
+          if (!isDown) return;
+          updateSlider(e.clientX);
+        });
+
+        // Touch events
+        container.addEventListener('touchstart', (e) => {
+          isDown = true;
+          if (e.touches[0]) updateSlider(e.touches[0].clientX);
+        }, { passive: true });
+        window.addEventListener('touchend', () => isDown = false);
+        window.addEventListener('touchmove', (e) => {
+          if (!isDown) return;
+          if (e.touches[0]) updateSlider(e.touches[0].clientX);
+        }, { passive: true });
+      }
     });
   </script>
 </body>
